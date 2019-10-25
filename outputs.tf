@@ -1,65 +1,69 @@
 output "us" {
   description = "Looker IP Addresses in United States"
-
-  value = [
-    "54.208.10.167",
-    "54.209.116.191",
-    "52.1.5.228",
-    "52.1.157.156",
-    "54.83.113.5",
-  ]
+  value       = "${local.us}"
 }
 
 output "ca" {
   description = "Looker IP Addresses in Canada"
-
-  value = [
-    "99.79.117.127",
-    "35.182.216.56",
-  ]
+  value       = "${local.ca}"
 }
 
 output "as" {
   description = "Looker IP Addresses in Asia"
-
-  value = [
-    "52.68.85.40",
-    "52.68.108.109",
-  ]
+  value       = "${local.as}"
 }
 
 output "ie" {
   description = "Looker IP Addresses in Ireland"
-
-  value = [
-    "52.16.163.151",
-    "52.16.174.170",
-  ]
+  value       = "${local.ie}"
 }
 
 output "de" {
   description = "Looker IP Addresses in Germany"
-
-  value = [
-    "18.196.243.94",
-    "18.184.246.171",
-  ]
+  value       = "${local.de}"
 }
 
 output "au" {
   description = "Looker IP Addresses in Australia"
-
-  value = [
-    "52.65.128.170",
-    "52.65.124.87",
-  ]
+  value       = "${local.au}"
 }
 
 output "sa" {
   description = "Looker IP Addresses in South America"
+  value       = "${local.sa}"
+}
 
-  value = [
-    "52.67.8.103",
-    "54.233.74.59",
-  ]
+output "us_cidr" {
+  description = "Looker IP Addresses in United States in CIDR"
+  value       = ["${formatlist("%s/32", local.us)}"]
+}
+
+output "ca_cidr" {
+  description = "Looker IP Addresses in Canada in CIDR"
+  value       = ["${formatlist("%s/32", local.ca)}"]
+}
+
+output "as_cidr" {
+  description = "Looker IP Addresses in Asia in CIDR"
+  value       = ["${formatlist("%s/32", local.as)}"]
+}
+
+output "ie_cidr" {
+  description = "Looker IP Addresses in Ireland in CIDR"
+  value       = ["${formatlist("%s/32", local.ie)}"]
+}
+
+output "de_cidr" {
+  description = "Looker IP Addresses in Germany in CIDR"
+  value       = ["${formatlist("%s/32", local.de)}"]
+}
+
+output "au_cidr" {
+  description = "Looker IP Addresses in Australia in CIDR"
+  value       = ["${formatlist("%s/32", local.au)}"]
+}
+
+output "sa_cidr" {
+  description = "Looker IP Addresses in South America in CIDR"
+  value       = ["${formatlist("%s/32", local.sa)}"]
 }

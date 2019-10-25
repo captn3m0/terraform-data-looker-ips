@@ -10,7 +10,7 @@ as per [their documentation](https://docs.looker.com/setup-and-management/enabli
 ```
 module "looker-ips" {
   source  = "captn3m0/looker-ips/data"
-  version = "1.0.0"
+  version = "1.1.0"
 }
 
 resource "aws_security_group_rule" "allow_all_from_looker_us" {
@@ -18,22 +18,31 @@ resource "aws_security_group_rule" "allow_all_from_looker_us" {
   from_port       = 0
   to_port         = 443
   protocol        = "tcp"
-  cidr_blocks     = ["${module.looker-ips.us}"]
+  cidr_blocks     = ["${module.looker-ips.us_cidr}"]
   security_group_id = "sg-123456"
 }
 ```
 
 ## Outputs
 
-| Name | Description                          |
-| ---- | ------------------------------------ |
-| as   | Looker IP Addresses in Asia          |
-| au   | Looker IP Addresses in Australia     |
-| ca   | Looker IP Addresses in Canada        |
-| de   | Looker IP Addresses in Germany       |
-| ie   | Looker IP Addresses in Ireland       |
-| sa   | Looker IP Addresses in South America |
-| us   | Looker IP Addresses in United States |
+All output variables are lists.
+
+| Name      | Description                                  |
+| --------- | -------------------------------------------- |
+| `as`      | Looker IP Addresses in Asia                  |
+| `as_cidr` | Looker IP Addresses in Asia in CIDR          |
+| `au`      | Looker IP Addresses in Australia             |
+| `au_cidr` | Looker IP Addresses in Australia in CIDR     |
+| `ca`      | Looker IP Addresses in Canada                |
+| `ca_cidr` | Looker IP Addresses in Canada in CIDR        |
+| `de`      | Looker IP Addresses in Germany               |
+| `de_cidr` | Looker IP Addresses in Germany in CIDR       |
+| `ie`      | Looker IP Addresses in Ireland               |
+| `ie_cidr` | Looker IP Addresses in Ireland in CIDR       |
+| `sa`      | Looker IP Addresses in South America         |
+| `sa_cidr` | Looker IP Addresses in South America in CIDR |
+| `us`      | Looker IP Addresses in United States         |
+| `us_cidr` | Looker IP Addresses in United States in CIDR |
 
 # LICENSE
 
