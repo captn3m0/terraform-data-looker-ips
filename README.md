@@ -25,7 +25,8 @@ resource "aws_security_group_rule" "allow_all_from_looker_us" {
 
 ## Outputs
 
-All output variables are lists.
+All output variables are lists. The output names are based on 2 letter
+[ISO country codes][3166] and [common continent codes](https://datahub.io/core/continent-codes#readme)
 
 | Name      | Description                                  |
 | --------- | -------------------------------------------- |
@@ -47,3 +48,5 @@ All output variables are lists.
 # LICENSE
 
 Licensed under MIT. See [nemo.mit-license.org](https://nemo.mit-license.org) for complete text.
+
+[3166]: https://www.iso.org/obp/ui/#search
