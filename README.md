@@ -10,7 +10,7 @@ as per [their documentation](https://docs.looker.com/setup-and-management/enabli
 ```
 module "looker-ips" {
   source  = "captn3m0/looker-ips/data"
-  version = "1.1.0"
+  version = "1.1.1"
 }
 
 resource "aws_security_group_rule" "allow_all_from_looker_us" {
@@ -44,6 +44,8 @@ All output variables are lists. The output names are based on 2 letter
 | `sa_cidr` | Looker IP Addresses in South America in CIDR |
 | `us`      | Looker IP Addresses in United States         |
 | `us_cidr` | Looker IP Addresses in United States in CIDR |
+| `all_ips` | Looker IP addresses everywhere               | 
+| `all_cidr`| Looker IP addresses everywhere in CIDR       | 
 
 # LICENSE
 

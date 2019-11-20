@@ -33,6 +33,20 @@ output "sa" {
   value       = "${local.sa}"
 }
 
+output "all_ips" {
+  description = "Looker IP addresses everywhere"
+
+  value = "${concat(
+      local.us,
+      local.ca,
+      local.as,
+      local.ie,
+      local.de,
+      local.au,
+      local.sa,
+    )}"
+}
+
 output "us_cidr" {
   description = "Looker IP Addresses in United States in CIDR"
   value       = ["${formatlist("%s/32", local.us)}"]
@@ -66,4 +80,18 @@ output "au_cidr" {
 output "sa_cidr" {
   description = "Looker IP Addresses in South America in CIDR"
   value       = ["${formatlist("%s/32", local.sa)}"]
+}
+
+output "all_cidr" {
+  description = "Looker IP addresses everywhere in CIDR"
+
+  value = "${formatlist("%s/32", concat(
+      local.us,
+      local.ca,
+      local.as,
+      local.ie,
+      local.de,
+      local.au,
+      local.sa,
+    ))}"
 }
