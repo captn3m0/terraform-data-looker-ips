@@ -47,6 +47,10 @@ All output variables are lists. The output names are based on 2 letter
 | `all_ips`  | Looker IP addresses everywhere               |
 | `all_cidr` | Looker IP addresses everywhere in CIDR       |
 
+# Changelog
+
+See [CHANGELOG.md](CHANGELOG.md)
+
 # LICENSE
 
 Licensed under MIT. See [nemo.mit-license.org](https://nemo.mit-license.org) for complete text.
