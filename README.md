@@ -40,12 +40,14 @@ To decide which one you need to use, you will need to know:
 | as\_cidr | Looker IP Addresses in Asia in CIDR (AWS only) |
 | au | Looker IP Addresses in Australia (AWS only) |
 | au\_cidr | Looker IP Addresses in Australia in CIDR (AWS only) |
-| aws\_cidr | Looker IP addresses everywhere in CIDR (AWS only) |
+| aws\_cidr | Looker IP addresses for all AWS regions (CIDR format) |
 | aws\_ips | Looker IP addresses everywhere (AWS only) |
 | ca | Looker IP Addresses in Canada (AWS only) |
 | ca\_cidr | Looker IP Addresses in Canada in CIDR (AWS only) |
 | de | Looker IP Addresses in Germany (AWS only) |
 | de\_cidr | Looker IP Addresses in Germany in CIDR (AWS only) |
+| gcp\_asia\_southeast1\_cidr | Looker CIDRs for instances hosted in GCP (South Carolina / us-east1) |
+| gcp\_asia\_southeast1\_ips | Looker IPs for instances hosted in GCP (Singapore / asia-southeast1) |
 | gcp\_cidr | Looker IP addresses everywhere in CIDR (GCP only) |
 | gcp\_europe\_west2\_cidr | Looker CIDRs for instances hosted in GCP (London / europe-west2) |
 | gcp\_europe\_west2\_ips | Looker IPs for instances hosted in GCP (London / europe-west2) |

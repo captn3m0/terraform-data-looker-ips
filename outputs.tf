@@ -81,7 +81,7 @@ output "sa_cidr" {
 }
 
 output "aws_cidr" {
-  description = "Looker IP addresses everywhere in CIDR (AWS only)"
+  description = "Looker IP addresses for all AWS regions (CIDR format)"
 
   value = "${formatlist("%s/32", concat(
     local.us,
@@ -128,13 +128,20 @@ output "gcp_europe_west3_ips" {
   value       = "${local.gcp-europe-west3}"
 }
 
+// Singapore
+output "gcp_asia_southeast1_ips" {
+  description = "Looker IPs for instances hosted in GCP (Singapore / asia-southeast1)"
+  value       = "${local.gcp-asia-southeast1}"
+}
+
+
+##### GCP CIDRs #####
+
 // South Carolina
 output "gcp_us_east1_cidr" {
   description = "Looker CIDRs for instances hosted in GCP (South Carolina / us-east1)"
   value       = ["${formatlist("%s/32", local.gcp-us-east1)}"]
 }
-
-##### GCP CIDRs #####
 
 // Northern Virginia
 output "gcp_us_east4_cidr" {
@@ -160,6 +167,12 @@ output "gcp_europe_west3_cidr" {
   value       = ["${formatlist("%s/32", local.gcp-europe-west3)}"]
 }
 
+// Singapore
+output "gcp_asia_southeast1_cidr" {
+  description = "Looker CIDRs for instances hosted in GCP (South Carolina / us-east1)"
+  value       = ["${formatlist("%s/32", local.gcp-us-east1)}"]
+}
+
 ##### GCP Common ####
 
 output "gcp_cidr" {
@@ -171,6 +184,7 @@ output "gcp_cidr" {
     local.gcp-us-west1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-asia-southeast1,
   ))}"
 }
 
@@ -179,13 +193,12 @@ output "gcp_ips" {
   description = "Looker IP addresses everywhere (GCP only)"
 
   value = "${concat(
-    local.us,
-    local.ca,
-    local.as,
-    local.ie,
-    local.de,
-    local.au,
-    local.sa,
+    local.gcp-us-east1,
+    local.gcp-us-east4,
+    local.gcp-us-west1,
+    local.gcp-europe-west2,
+    local.gcp-europe-west3,
+    local.gcp-asia-southeast1,
   )}"
 }
 
@@ -200,6 +213,7 @@ output "all_cidr" {
     local.gcp-us-west1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-asia-southeast1,
     local.us,
     local.ca,
     local.as,
@@ -220,6 +234,7 @@ output "all_ips" {
     local.gcp-us-west1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-asia-southeast1,
     local.us,
     local.ca,
     local.as,
