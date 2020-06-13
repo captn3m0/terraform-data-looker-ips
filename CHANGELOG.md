@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.2][1.2.2] - 2020-06-13
+
+### Added
+- New Looker IP for GCP/Sydney region
+
 ## [1.2.1][1.2.1] - 2020-05-15
 
 ### Added
@@ -51,7 +56,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Initial Release
 
-[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.2.1...HEAD
+[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.2.2...HEAD
+[1.2.1]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.1.2...1.2.0
 [1.1.2]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.1.1...1.1.1

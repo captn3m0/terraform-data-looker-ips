@@ -134,6 +134,12 @@ output "gcp_asia_southeast1_ips" {
   value       = "${local.gcp-asia-southeast1}"
 }
 
+// Sydney
+output "gcp_australia_southeast1" {
+  description = "Looker IPs for instances hosted in GCP (Sydney / australia-southeast1)"
+  value       = "${local.gcp-australia-southeast1}"
+}
+
 
 ##### GCP CIDRs #####
 
@@ -173,6 +179,12 @@ output "gcp_asia_southeast1_cidr" {
   value       = ["${formatlist("%s/32", local.gcp-us-east1)}"]
 }
 
+// Singapore
+output "gcp_australia_southeast1" {
+  description = "Looker CIDRs for instances hosted in GCP (Sydney / australia-southeast1)"
+  value       = ["${formatlist("%s/32", local.gcp-australia-southeast1)}"]
+}
+
 ##### GCP Common ####
 
 output "gcp_cidr" {
@@ -185,6 +197,7 @@ output "gcp_cidr" {
     local.gcp-europe-west2,
     local.gcp-europe-west3,
     local.gcp-asia-southeast1,
+    local.gcp-australia-southeast1
   ))}"
 }
 
@@ -199,6 +212,7 @@ output "gcp_ips" {
     local.gcp-europe-west2,
     local.gcp-europe-west3,
     local.gcp-asia-southeast1,
+    local.gcp-australia-southeast1
   )}"
 }
 
@@ -214,6 +228,7 @@ output "all_cidr" {
     local.gcp-europe-west2,
     local.gcp-europe-west3,
     local.gcp-asia-southeast1,
+    local.gcp-australia-southeast1,
     local.us,
     local.ca,
     local.as,
@@ -235,6 +250,7 @@ output "all_ips" {
     local.gcp-europe-west2,
     local.gcp-europe-west3,
     local.gcp-asia-southeast1,
+    local.gcp-australia-southeast1,
     local.us,
     local.ca,
     local.as,

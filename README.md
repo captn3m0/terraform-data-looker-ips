@@ -48,6 +48,7 @@ To decide which one you need to use, you will need to know:
 | de\_cidr | Looker IP Addresses in Germany in CIDR (AWS only) |
 | gcp\_asia\_southeast1\_cidr | Looker CIDRs for instances hosted in GCP (South Carolina / us-east1) |
 | gcp\_asia\_southeast1\_ips | Looker IPs for instances hosted in GCP (Singapore / asia-southeast1) |
+| gcp\_australia\_southeast1 | Looker CIDRs for instances hosted in GCP (Sydney / australia-southeast1) |
 | gcp\_cidr | Looker IP addresses everywhere in CIDR (GCP only) |
 | gcp\_europe\_west2\_cidr | Looker CIDRs for instances hosted in GCP (London / europe-west2) |
 | gcp\_europe\_west2\_ips | Looker IPs for instances hosted in GCP (London / europe-west2) |
