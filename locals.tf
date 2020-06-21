@@ -22,6 +22,13 @@ locals {
     "35.185.199.172",
   ]
 
+  # Canada / Montreal
+
+  gcp-northamerica-northeast1 = [
+    "35.203.16.100",
+    "35.203.92.116",
+  ]
+
   # London
   gcp-europe-west2 = [
     "35.246.117.58",
