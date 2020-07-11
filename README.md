@@ -64,16 +64,12 @@ If you are unsure which region your instance is in, please reach out to Looker s
 | eks\_sa\_east\_1\_cidr | CIDRs for instances hosted on Amazon EKS in eks-sa-east-1 region |
 | gcp\_asia\_southeast1\_cidr | CIDRs for instances hosted on GCP (South Carolina / us-east1) |
 | gcp\_asia\_southeast1\_ips | IP addresses for instances hosted on GCP (Singapore / asia-southeast1) |
-| gcp\_australia\_southeast1\_cidr | CIDRs for instances hosted on GCP (Sydney / australia-southeast1) |
-| gcp\_australia\_southeast1\_ips | IP addresses for instances hosted on GCP (Sydney / australia-southeast1) |
 | gcp\_cidr | IP addresses for instances hosted on GCP in any region. |
 | gcp\_europe\_west2\_cidr | CIDRs for instances hosted on GCP (London / europe-west2) |
 | gcp\_europe\_west2\_ips | IP addresses for instances hosted on GCP (London / europe-west2) |
 | gcp\_europe\_west3\_cidr | CIDRs for instances hosted on GCP (Frankfurt / europe-west3) |
 | gcp\_europe\_west3\_ips | IP addresses for instances hosted on GCP (Frankfurt / europe-west3) |
 | gcp\_ips | Looker IP addresses everywhere (GCP only). |
-| gcp\_northamerica\_northeast1\_cidr | CIDRs for instances hosted on GCP (Canada / Montreal / gcp-northamerica-northeast1) |
-| gcp\_northamerica\_northeast1\_ips | IP addresses for instances hosted on GCP (Canada / Montreal / gcp-northamerica-northeast1) |
 | gcp\_us\_east1\_cidr | CIDRs for instances hosted on GCP (South Carolina / us-east1) |
 | gcp\_us\_east1\_ips | IP addresses for instances hosted on GCP (South Carolina / us-east1) |
 | gcp\_us\_east4\_cidr | CIDRs for instances hosted on GCP (Northern Virginia / us-east4) |
