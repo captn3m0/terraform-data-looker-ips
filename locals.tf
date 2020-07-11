@@ -1,32 +1,27 @@
 locals {
 
-  // South Carolina
+  # South Carolina
   gcp-us-east1 = [
     "35.196.243.26",
     "35.196.36.95",
+    "35.196.227.117"
   ]
 
-  // Northern Virginia
+  # Northern Virginia
   gcp-us-east4 = [
     "35.186.176.0",
     "35.245.211.109",
     "35.245.121.2",
+    "35.236.208.158"
   ]
 
   # Oregon
   gcp-us-west1 = [
+    "35.185.199.172",
     "34.82.227.133",
     "35.233.172.23",
     "34.83.141.137",
     "34.83.151.46",
-    "35.185.199.172",
-  ]
-
-  # Canada / Montreal
-
-  gcp-northamerica-northeast1 = [
-    "35.203.16.100",
-    "35.203.92.116",
   ]
 
   # London
@@ -35,7 +30,6 @@ locals {
     "34.89.40.253"
   ]
 
-
   # Frankfurt
   gcp-europe-west3 = [
     "34.89.161.120",
@@ -43,15 +37,20 @@ locals {
   ]
 
   # Singapore
-
   gcp-asia-southeast1 = [
     "35.185.184.54"
   ]
 
+  # Canada / Montreal
+  gcp-northamerica-northeast1 = [
+    "35.203.16.100",
+    "35.203.92.116",
+  ]
+
+  # Sydney
   gcp-australia-southeast1 = [
     "35.189.54.47"
   ]
-
 
   us = [
     "54.208.10.167",
@@ -90,5 +89,51 @@ locals {
   sa = [
     "52.67.8.103",
     "54.233.74.59",
+  ]
+
+  /**
+      Use these IP addresses for all instances hosted on Amazon EKS
+      that were created on or after 07/07/2020.
+    */
+
+  eks-us-east-1 = [
+    "18.210.137.130",
+    "54.204.171.253",
+    "50.17.192.87",
+  ]
+  eks-ca-central-1 = [
+    "52.60.157.61",
+    "35.182.169.25",
+    "52.60.59.128",
+  ]
+
+  eks-eu-west-1 = [
+    "52.210.85.110",
+    "52.30.198.163",
+    "34.249.159.112",
+  ]
+
+  eks-eu-central-1 = [
+    "18.157.231.108",
+    "18.157.207.33",
+    "18.157.64.198",
+  ]
+  eks-ap-northeast-1 = [
+
+    "54.250.91.57",
+    "13.112.30.110",
+    "54.92.76.241",
+  ]
+
+  eks-ap-southeast-2 = [
+    "13.238.132.174",
+    "3.105.238.71",
+    "3.105.113.36",
+  ]
+
+  eks-sa-east-1 = [
+    "54.232.58.181",
+    "54.232.58.98",
+    "177.71.134.208",
   ]
 }
