@@ -116,12 +116,6 @@ output "gcp_us_west1_ips" {
   value       = "${local.gcp-us-west1}"
 }
 
-// Canada/Montreal
-output "gcp_northamerica_northeast1_ips" {
-  description = "IP addresses for instances hosted on GCP (Canada / Montreal / gcp-northamerica-northeast1)"
-  value       = "${local.gcp-northamerica-northeast1}"
-}
-
 // London
 output "gcp_europe_west2_ips" {
   description = "IP addresses for instances hosted on GCP (London / europe-west2)"
@@ -139,13 +133,6 @@ output "gcp_asia_southeast1_ips" {
   description = "IP addresses for instances hosted on GCP (Singapore / asia-southeast1)"
   value       = "${local.gcp-asia-southeast1}"
 }
-
-// Sydney
-output "gcp_australia_southeast1_ips" {
-  description = "IP addresses for instances hosted on GCP (Sydney / australia-southeast1)"
-  value       = "${local.gcp-australia-southeast1}"
-}
-
 
 ##### GCP CIDRs #####
 
@@ -167,13 +154,6 @@ output "gcp_us_west1_cidr" {
   value       = ["${formatlist("%s/32", local.gcp-us-west1)}"]
 }
 
-
-// Canada / Montreal
-output "gcp_northamerica_northeast1_cidr" {
-  description = "CIDRs for instances hosted on GCP (Canada / Montreal / gcp-northamerica-northeast1)"
-  value       = ["${formatlist("%s/32", local.gcp-northamerica-northeast1)}"]
-}
-
 // London
 output "gcp_europe_west2_cidr" {
   description = "CIDRs for instances hosted on GCP (London / europe-west2)"
@@ -192,12 +172,6 @@ output "gcp_asia_southeast1_cidr" {
   value       = ["${formatlist("%s/32", local.gcp-us-east1)}"]
 }
 
-// Singapore
-output "gcp_australia_southeast1_cidr" {
-  description = "CIDRs for instances hosted on GCP (Sydney / australia-southeast1)"
-  value       = ["${formatlist("%s/32", local.gcp-australia-southeast1)}"]
-}
-
 ##### GCP Common ####
 
 output "gcp_cidr" {
@@ -207,11 +181,9 @@ output "gcp_cidr" {
     local.gcp-us-east1,
     local.gcp-us-east4,
     local.gcp-us-west1,
-    local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
     local.gcp-asia-southeast1,
-    local.gcp-australia-southeast1
   ))}"
 }
 
@@ -222,11 +194,9 @@ output "gcp_ips" {
     local.gcp-us-east1,
     local.gcp-us-east4,
     local.gcp-us-west1,
-    local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
     local.gcp-asia-southeast1,
-    local.gcp-australia-southeast1
   )}"
 }
 
@@ -321,11 +291,9 @@ output "all_cidr" {
     local.gcp-us-east1,
     local.gcp-us-east4,
     local.gcp-us-west1,
-    local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
     local.gcp-asia-southeast1,
-    local.gcp-australia-southeast1,
     local.us,
     local.ca,
     local.as,
@@ -350,11 +318,9 @@ output "all_ips" {
     local.gcp-us-east1,
     local.gcp-us-east4,
     local.gcp-us-west1,
-    local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
     local.gcp-asia-southeast1,
-    local.gcp-australia-southeast1,
     local.us,
     local.ca,
     local.as,

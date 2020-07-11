@@ -41,17 +41,6 @@ locals {
     "35.185.184.54"
   ]
 
-  # Canada / Montreal
-  gcp-northamerica-northeast1 = [
-    "35.203.16.100",
-    "35.203.92.116",
-  ]
-
-  # Sydney
-  gcp-australia-southeast1 = [
-    "35.189.54.47"
-  ]
-
   us = [
     "54.208.10.167",
     "54.209.116.191",
