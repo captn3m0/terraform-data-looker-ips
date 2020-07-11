@@ -4,12 +4,18 @@ Looker's IP addresses, as per [their documentation](https://docs.looker.com/setu
 
 > All network traffic from Looker will come from one of the following IP addresses, based on the host+region where your Looker instance is hosted. Please whitelist each of the IP addresses in the appropriate region listed below. These whitelist IP addresses also apply for SFTP and SMTP destinations. Starting April 2020, Looker-hosted instances are hosted on GCP by default.
 
+This module supports all 3 modes of hosting:
+
+- Legacy AWS
+- Next generation GCP
+- Next generation EKS
+
 # Usage
 
 ```
 module "looker-ips" {
   source  = "captn3m0/looker-ips/data"
-  version = "1.2.0"
+  version = "1.3.0"
 }
 
 resource "aws_security_group_rule" "allow_all_from_looker_aws_us" {
