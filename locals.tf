@@ -15,6 +15,12 @@ locals {
     "35.236.208.158"
   ]
 
+  # Iowa
+  gcp-us-central1 = [
+    "34.70.246.244",
+    "34.72.125.23"
+  ]
+
   # Oregon
   gcp-us-west1 = [
     "35.185.199.172",
@@ -22,6 +28,12 @@ locals {
     "35.233.172.23",
     "34.83.141.137",
     "34.83.151.46",
+  ]
+
+  # Canada / Montreal
+  gcp-northamerica-northeast1 = [
+    "35.203.16.100",
+    "35.203.92.116",
   ]
 
   # London
@@ -33,7 +45,15 @@ locals {
   # Frankfurt
   gcp-europe-west3 = [
     "34.89.161.120",
-    "34.89.225.213"
+    "34.89.225.213",
+    "35.204.222.110",
+    "34.91.136.228"
+  ]
+
+  # Tokyo, Japan
+  gcp-asia-northeast1 = [
+    "34.84.255.194",
+    "35.243.85.184"
   ]
 
   # Singapore
@@ -41,15 +61,16 @@ locals {
     "35.185.184.54"
   ]
 
-  # Canada / Montreal
-  gcp-northamerica-northeast1 = [
-    "35.203.16.100",
-    "35.203.92.116",
-  ]
-
   # Sydney
   gcp-australia-southeast1 = [
-    "35.189.54.47"
+    "35.189.54.47",
+    "35.189.25.55"
+  ]
+
+  # São Paulo, Brazil
+  gcp-southamerica-east1 = [
+    "35.199.102.40",
+    "35.199.99.1"
   ]
 
   us = [

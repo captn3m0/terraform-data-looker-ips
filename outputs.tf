@@ -110,6 +110,12 @@ output "gcp_us_east4_ips" {
   value       = "${local.gcp-us-east4}"
 }
 
+// Northern Virginia
+output "gcp_us_central1_ips" {
+  description = "IP addresses for instances hosted on GCP (Iowa / gcp-us-central1)"
+  value       = "${local.gcp-us-central1}"
+}
+
 // Oregon
 output "gcp_us_west1_ips" {
   description = "IP addresses for instances hosted on GCP (Oregon / us-west1)"
@@ -134,6 +140,12 @@ output "gcp_europe_west3_ips" {
   value       = "${local.gcp-europe-west3}"
 }
 
+// Tokyo
+output "gcp_asia_northeast1_ips" {
+  description = "IP addresses for instances hosted on GCP (Tokyo / gcp-asia-northeast1)"
+  value       = "${local.gcp-asia-northeast1}"
+}
+
 // Singapore
 output "gcp_asia_southeast1_ips" {
   description = "IP addresses for instances hosted on GCP (Singapore / asia-southeast1)"
@@ -144,6 +156,12 @@ output "gcp_asia_southeast1_ips" {
 output "gcp_australia_southeast1_ips" {
   description = "IP addresses for instances hosted on GCP (Sydney / australia-southeast1)"
   value       = "${local.gcp-australia-southeast1}"
+}
+
+// São Paulo, Brazil
+output "gcp_southamerica_east1_ips" {
+  description = "IP addresses for instances hosted on GCP (São Paulo / gcp-southamerica-east1)"
+  value       = "${local.gcp-southamerica-east1}"
 }
 
 
@@ -157,9 +175,16 @@ output "gcp_us_east1_cidr" {
 
 // Northern Virginia
 output "gcp_us_east4_cidr" {
-  description = "CIDRs for instances hosted on GCP (Northern Virginia / us-east4)"
+  description = "CIDRs for instances hosted on GCP (Iowa / us-east4)"
   value       = ["${formatlist("%s/32", local.gcp-us-east4)}"]
 }
+
+// Iowa
+output "gcp_us_central1_cidr" {
+  description = "CIDRs for instances hosted on GCP (Iowa / us-central1)"
+  value       = ["${formatlist("%s/32", local.gcp-us-central1)}"]
+}
+
 
 // Oregon
 output "gcp_us_west1_cidr" {
@@ -186,16 +211,28 @@ output "gcp_europe_west3_cidr" {
   value       = ["${formatlist("%s/32", local.gcp-europe-west3)}"]
 }
 
+// Tokyo
+output "gcp_asia_northeast1_cidr" {
+  description = "CIDRs for instances hosted on GCP (Tokyo / asia-northeast1)"
+  value       = ["${formatlist("%s/32", local.gcp-asia-northeast1)}"]
+}
+
 // Singapore
 output "gcp_asia_southeast1_cidr" {
   description = "CIDRs for instances hosted on GCP (South Carolina / us-east1)"
   value       = ["${formatlist("%s/32", local.gcp-us-east1)}"]
 }
 
-// Singapore
+// Sydney
 output "gcp_australia_southeast1_cidr" {
   description = "CIDRs for instances hosted on GCP (Sydney / australia-southeast1)"
   value       = ["${formatlist("%s/32", local.gcp-australia-southeast1)}"]
+}
+
+// São Paulo, Brazil
+output "gcp_southamerica_east1_cidr" {
+  description = "CIDRs for instances hosted on GCP (São Paulo / southamerica-east1)"
+  value       = ["${formatlist("%s/32", local.gcp-southamerica-east1)}"]
 }
 
 ##### GCP Common ####
@@ -206,12 +243,15 @@ output "gcp_cidr" {
   value = "${formatlist("%s/32", concat(
     local.gcp-us-east1,
     local.gcp-us-east4,
+    local.gcp-us-central1,
     local.gcp-us-west1,
     local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-asia-northeast1,
     local.gcp-asia-southeast1,
-    local.gcp-australia-southeast1
+    local.gcp-australia-southeast1,
+    local.gcp-southamerica-east1
   ))}"
 }
 
@@ -221,12 +261,15 @@ output "gcp_ips" {
   value = "${concat(
     local.gcp-us-east1,
     local.gcp-us-east4,
+    local.gcp-us-central1,
     local.gcp-us-west1,
     local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-asia-northeast1,
     local.gcp-asia-southeast1,
-    local.gcp-australia-southeast1
+    local.gcp-australia-southeast1,
+    local.gcp-southamerica-east1
   )}"
 }
 
@@ -320,12 +363,15 @@ output "all_cidr" {
   value = "${formatlist("%s/32", concat(
     local.gcp-us-east1,
     local.gcp-us-east4,
+    local.gcp-us-central1,
     local.gcp-us-west1,
     local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-asia-northeast1,
     local.gcp-asia-southeast1,
     local.gcp-australia-southeast1,
+    local.gcp-southamerica-east1,
     local.us,
     local.ca,
     local.as,
@@ -349,12 +395,15 @@ output "all_ips" {
   value = "${concat(
     local.gcp-us-east1,
     local.gcp-us-east4,
+    local.gcp-us-central1,
     local.gcp-us-west1,
     local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-asia-northeast1,
     local.gcp-asia-southeast1,
     local.gcp-australia-southeast1,
+    local.gcp-southamerica-east1,
     local.us,
     local.ca,
     local.as,
