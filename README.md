@@ -62,6 +62,8 @@ If you are unsure which region your instance is in, please reach out to Looker s
 | eks\_ips | IP addresses for instances hosted on Amazon EKS across all regions |
 | eks\_sa\_east\_1 | IP addresses for instances hosted on Amazon EKS in sa-east-1 region. |
 | eks\_sa\_east\_1\_cidr | CIDRs for instances hosted on Amazon EKS in eks-sa-east-1 region |
+| gcp\_asia\_northeast1\_cidr | CIDRs for instances hosted on GCP (Tokyo / asia-northeast1) |
+| gcp\_asia\_northeast1\_ips | IP addresses for instances hosted on GCP (Tokyo / gcp-asia-northeast1) |
 | gcp\_asia\_southeast1\_cidr | CIDRs for instances hosted on GCP (South Carolina / us-east1) |
 | gcp\_asia\_southeast1\_ips | IP addresses for instances hosted on GCP (Singapore / asia-southeast1) |
 | gcp\_australia\_southeast1\_cidr | CIDRs for instances hosted on GCP (Sydney / australia-southeast1) |
@@ -74,9 +76,13 @@ If you are unsure which region your instance is in, please reach out to Looker s
 | gcp\_ips | Looker IP addresses everywhere (GCP only). |
 | gcp\_northamerica\_northeast1\_cidr | CIDRs for instances hosted on GCP (Canada / Montreal / gcp-northamerica-northeast1) |
 | gcp\_northamerica\_northeast1\_ips | IP addresses for instances hosted on GCP (Canada / Montreal / gcp-northamerica-northeast1) |
+| gcp\_southamerica\_east1\_cidr | CIDRs for instances hosted on GCP (São Paulo / southamerica-east1) |
+| gcp\_southamerica\_east1\_ips | IP addresses for instances hosted on GCP (São Paulo / gcp-southamerica-east1) |
+| gcp\_us\_central1\_cidr | CIDRs for instances hosted on GCP (Iowa / us-central1) |
+| gcp\_us\_central1\_ips | IP addresses for instances hosted on GCP (Iowa / gcp-us-central1) |
 | gcp\_us\_east1\_cidr | CIDRs for instances hosted on GCP (South Carolina / us-east1) |
 | gcp\_us\_east1\_ips | IP addresses for instances hosted on GCP (South Carolina / us-east1) |
-| gcp\_us\_east4\_cidr | CIDRs for instances hosted on GCP (Northern Virginia / us-east4) |
+| gcp\_us\_east4\_cidr | CIDRs for instances hosted on GCP (Iowa / us-east4) |
 | gcp\_us\_east4\_ips | IP addresses for instances hosted on GCP (Northern Virginia / us-east4) |
 | gcp\_us\_west1\_cidr | CIDRs for instances hosted on GCP (Oregon / us-west1) |
 | gcp\_us\_west1\_ips | IP addresses for instances hosted on GCP (Oregon / us-west1) |
