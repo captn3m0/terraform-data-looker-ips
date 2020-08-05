@@ -7,20 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Removed
-- Removes Montreal and Sydney GCP regions, as they are no longer on the [official list](https://docs.looker.com/setup-and-management/enabling-secure-db).
-
 ## [1.3.0][1.3.0] - 2020-07-12
-
-### Added
 - Adds support for new EKS hosting
 
 ## [1.2.3][1.2.3] - 2020-06-21
 
-### Added
 - New Looker IP for GCP/Canada region
-
-### Fixed
 - Fixes output variable name for Sydney regions
 
 ## [1.2.2][1.2.2] - 2020-06-13
