@@ -15,7 +15,7 @@ This module supports all 3 modes of hosting:
 ```
 module "looker-ips" {
   source  = "captn3m0/looker-ips/data"
-  version = "1.3.0"
+  version = "1.3.2"
 }
 
 resource "aws_security_group_rule" "allow_all_from_looker_aws_us" {

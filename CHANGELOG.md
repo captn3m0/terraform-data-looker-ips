@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.2][1.3.2] - 2020-08-10
+- New IPs for GCP (us-east4, us-central1, us-west1, europe-west2)
+
 ## [1.3.1][1.3.1] - 2020-08-05
 - Adds Iowa, Tokyo, and São Paulo regions (all GCP)
 - The Sydney and Singapore regions went missing on the website for a while, added them back.
