@@ -12,7 +12,7 @@ This module supports all 3 modes of hosting:
 
 # Usage
 
-```
+```hcl
 module "looker-ips" {
   source  = "captn3m0/looker-ips/data"
   version = "1.3.2"
