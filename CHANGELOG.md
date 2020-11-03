@@ -5,20 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [Unreleased][unreleased]
+
+## [1.3.3][1.3.3] - 2020-11-03
+### Changed
+- New IPs for EKS in `us-east-1`
 
 ## [1.3.2][1.3.2] - 2020-08-10
+
+### Changed
 - New IPs for GCP (us-east4, us-central1, us-west1, europe-west2)
 
 ## [1.3.1][1.3.1] - 2020-08-05
+
+### Added
 - Adds Iowa, Tokyo, and São Paulo regions (all GCP)
 - The Sydney and Singapore regions went missing on the website for a while, added them back.
 
 ## [1.3.0][1.3.0] - 2020-07-12
+
+### Added
 - Adds support for new EKS hosting
 
 ## [1.2.3][1.2.3] - 2020-06-21
 
+### Added
 - New Looker IP for GCP/Canada region
 - Fixes output variable name for Sydney regions
 
@@ -55,10 +66,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Adds outputs for `all_ips` and `all_cidrs`
 
-[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.1.2...HEAD
-[1.1.2]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.1.2...1.1.1
-[1.1.1]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.1.1...1.1.0
-
 ## [1.1.0][1.1.0] - 2019-10-25
 
 ### Added
@@ -71,12 +78,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Initial Release
 
-[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.3.0...HEAD
-[1.3.1]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.3.0...1.3.1
-[1.3.0]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.2.3...1.3.0
-[1.2.2]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.2.1...1.2.2
-[1.2.1]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.2.1...1.2.2
-[1.2.1]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.2.0...1.2.1
+[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.3...HEAD
+[1.3.3]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.3...v1.3.3
+[1.3.2]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.1...v1.3.2
+[1.3.1]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.0...v1.3.1
+[1.3.0]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.2.3...v1.3.0
+[1.2.3]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.2.2...v1.2.3
+[1.2.2]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.2.1...v1.2.2
+[1.2.1]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.2.1...v1.2.2
+[1.2.1]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.2.0...v1.2.1
 [1.2.0]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.1.2...1.2.0
 [1.1.2]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.1.1...1.1.1
 [1.1.2]: https://github.com/captn3m0/terraform-data-looker-ips/compare/1.1.1...1.1.2
