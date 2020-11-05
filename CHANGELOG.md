@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [1.3.4][1.3.4] - 2020-11-05
+
+### Fixed
+- Outpus `aws_ips` and `gcp_asia_southeast1_cidr` now point to the correct IPs.
+
+### Added
+- 2 new regions for GCP: `asia-east1` and `asia-southeast2`.
+
+### Changed
+- New IPs for EKS in `us-east-1`
+
 ## [1.3.3][1.3.3] - 2020-11-03
 ### Changed
 - New IPs for EKS in `us-east-1`
@@ -78,8 +89,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Initial Release
 
-[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.3...HEAD
-[1.3.3]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.3...v1.3.3
+[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.4...HEAD
+[1.3.4]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.3...v1.3.4
+[1.3.3]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.2...v1.3.3
 [1.3.2]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.1...v1.3.2
 [1.3.1]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.2.3...v1.3.0
