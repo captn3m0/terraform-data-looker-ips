@@ -37,11 +37,13 @@ output "aws_ips" {
   description = "Legacy Hosting IP addresses for instances hosted anywhere that were created before 07/07/2020"
 
   value = "${concat(
-    local.gcp-us-east1,
-    local.gcp-us-east4,
-    local.gcp-us-west1,
-    local.gcp-europe-west2,
-    local.gcp-europe-west3,
+    local.us,
+    local.ca,
+    local.as,
+    local.ie,
+    local.de,
+    local.au,
+    local.sa,
   )}"
 }
 
@@ -140,6 +142,12 @@ output "gcp_europe_west3_ips" {
   value       = "${local.gcp-europe-west3}"
 }
 
+// Taiwan
+output "gcp_asia_east1_ips" {
+  description = "IP addresses for instances hosted on GCP (Taiwan / asia-east1)"
+  value       = "${local.gcp-asia-east1}"
+}
+
 // Tokyo
 output "gcp_asia_northeast1_ips" {
   description = "IP addresses for instances hosted on GCP (Tokyo / gcp-asia-northeast1)"
@@ -150,6 +158,12 @@ output "gcp_asia_northeast1_ips" {
 output "gcp_asia_southeast1_ips" {
   description = "IP addresses for instances hosted on GCP (Singapore / asia-southeast1)"
   value       = "${local.gcp-asia-southeast1}"
+}
+
+// Jakarta
+output "gcp_asia_southeast2_ips" {
+  description = "IP addresses for instances hosted on GCP (Jakarta / asia-southeast2)"
+  value       = "${local.gcp-asia-southeast2}"
 }
 
 // Sydney
@@ -211,6 +225,12 @@ output "gcp_europe_west3_cidr" {
   value       = ["${formatlist("%s/32", local.gcp-europe-west3)}"]
 }
 
+// Frankfurt
+output "gcp_asia_east1_cidr" {
+  description = "CIDRs for instances hosted on GCP (Taiwan / asia-east1)"
+  value       = ["${formatlist("%s/32", local.gcp-asia-east1)}"]
+}
+
 // Tokyo
 output "gcp_asia_northeast1_cidr" {
   description = "CIDRs for instances hosted on GCP (Tokyo / asia-northeast1)"
@@ -219,8 +239,14 @@ output "gcp_asia_northeast1_cidr" {
 
 // Singapore
 output "gcp_asia_southeast1_cidr" {
-  description = "CIDRs for instances hosted on GCP (South Carolina / us-east1)"
-  value       = ["${formatlist("%s/32", local.gcp-us-east1)}"]
+  description = "CIDRs for instances hosted on GCP (Singapore / asia-southeast1)"
+  value       = ["${formatlist("%s/32", local.gcp-asia-southeast1)}"]
+}
+
+// Jakarta
+output "gcp_asia_southeast2_cidr" {
+  description = "CIDRs for instances hosted on GCP (Jakarta / asia-southeast2)"
+  value       = ["${formatlist("%s/32", local.gcp-asia-southeast2)}"]
 }
 
 // Sydney
@@ -248,8 +274,9 @@ output "gcp_cidr" {
     local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-asia-east1,
     local.gcp-asia-northeast1,
-    local.gcp-asia-southeast1,
+    local.gcp-asia-southeast2,
     local.gcp-australia-southeast1,
     local.gcp-southamerica-east1
   ))}"
@@ -266,8 +293,10 @@ output "gcp_ips" {
     local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-asia-east1,
     local.gcp-asia-northeast1,
     local.gcp-asia-southeast1,
+    local.gcp-asia-southeast2,
     local.gcp-australia-southeast1,
     local.gcp-southamerica-east1
   )}"
