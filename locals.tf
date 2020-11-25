@@ -74,12 +74,15 @@ locals {
   gcp-europe-west3 = [
     "34.89.161.120",
     "34.89.225.213",
+  ]
+
+  # Eemshaven, Netherlands
+  gcp-europe-west4 = [
     "35.204.222.110",
     "34.91.136.228"
   ]
 
   # Changhua County, Taiwan
-
   gcp-asia-east1 = [
     "104.199.206.209",
     "34.80.173.212",

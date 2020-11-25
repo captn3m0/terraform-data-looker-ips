@@ -142,6 +142,12 @@ output "gcp_europe_west3_ips" {
   value       = "${local.gcp-europe-west3}"
 }
 
+// Eemshaven, Netherlands
+output "gcp_europe_west4_ips" {
+  description = "IP addresses for instances hosted on GCP (Eemshaven / europe-west4)"
+  value       = "${local.gcp-europe-west4}"
+}
+
 // Taiwan
 output "gcp_asia_east1_ips" {
   description = "IP addresses for instances hosted on GCP (Taiwan / asia-east1)"
@@ -225,7 +231,13 @@ output "gcp_europe_west3_cidr" {
   value       = ["${formatlist("%s/32", local.gcp-europe-west3)}"]
 }
 
-// Frankfurt
+// Eemshaven, Netherlands
+output "gcp_europe_west4_cidr" {
+  description = "CIDRs for instances hosted on GCP (Eemshaven / europe-west4)"
+  value       = ["${formatlist("%s/32", local.gcp-europe-west4)}"]
+}
+
+// Taiwan
 output "gcp_asia_east1_cidr" {
   description = "CIDRs for instances hosted on GCP (Taiwan / asia-east1)"
   value       = ["${formatlist("%s/32", local.gcp-asia-east1)}"]
@@ -274,6 +286,7 @@ output "gcp_cidr" {
     local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-europe-west4,
     local.gcp-asia-east1,
     local.gcp-asia-northeast1,
     local.gcp-asia-southeast2,
@@ -293,6 +306,7 @@ output "gcp_ips" {
     local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-europe-west4,
     local.gcp-asia-east1,
     local.gcp-asia-northeast1,
     local.gcp-asia-southeast1,
@@ -397,6 +411,7 @@ output "all_cidr" {
     local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-europe-west4,
     local.gcp-asia-northeast1,
     local.gcp-asia-southeast1,
     local.gcp-australia-southeast1,
@@ -429,6 +444,7 @@ output "all_ips" {
     local.gcp-northamerica-northeast1,
     local.gcp-europe-west2,
     local.gcp-europe-west3,
+    local.gcp-europe-west4,
     local.gcp-asia-northeast1,
     local.gcp-asia-southeast1,
     local.gcp-australia-southeast1,
