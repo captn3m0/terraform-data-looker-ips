@@ -20,14 +20,11 @@ locals {
     "34.86.118.239",
     "35.245.177.112",
     "34.86.214.226",
-    "35.221.30.177",
-    "35.245.121.2"
   ]
 
   # Iowa
   gcp-us-central1 = [
     "34.70.246.244",
-    "34.72.125.23"
   ]
 
   # Oregon
@@ -44,15 +41,12 @@ locals {
     "35.247.61.151",
     "34.82.193.215",
     "35.233.222.226",
-    "34.83.141.137",
-    "34.83.151.46",
     "35.185.199.172"
   ]
 
   # Canada / Montreal
   gcp-northamerica-northeast1 = [
     "35.203.16.100",
-    "35.203.92.116",
   ]
 
   # London
@@ -73,13 +67,11 @@ locals {
   # Frankfurt
   gcp-europe-west3 = [
     "34.89.161.120",
-    "34.89.225.213",
   ]
 
   # Eemshaven, Netherlands
   gcp-europe-west4 = [
     "35.204.222.110",
-    "34.91.136.228"
   ]
 
   # Changhua County, Taiwan
@@ -92,7 +84,6 @@ locals {
   # Tokyo, Japan
   gcp-asia-northeast1 = [
     "34.84.255.194",
-    "35.243.85.184"
   ]
 
   # Singapore
@@ -110,13 +101,11 @@ locals {
   # Sydney
   gcp-australia-southeast1 = [
     "35.189.54.47",
-    "35.189.25.55"
   ]
 
   # São Paulo, Brazil
   gcp-southamerica-east1 = [
     "35.199.102.40",
-    "35.199.99.1"
   ]
 
   us = [
@@ -145,7 +134,6 @@ locals {
   de = [
     "18.196.243.94",
     "18.184.246.171",
-    "34.89.161.120",
   ]
 
   au = [
