@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [1.3.6][1.3.6] - 2020-11-26
+
+### Removed
+- 12 IPs removed from various GCP and AWS zones.
+
 ## [1.3.5][1.3.5] - 2020-11-25
 
 ### Changed
