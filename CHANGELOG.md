@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [1.3.7][1.3.7] - 2020-12-24
+
+### Added
+- 3 new IPs for the Europe (Ireland) (`eu-west-1`) Instances Hosted on Amazon Elastic Kubernetes Service (`eks-eu-west-1`)
+
 ## [1.3.6][1.3.6] - 2020-11-26
 
 ### Removed
