@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased][unreleased]
 
 ## [1.3.8][1.3.8] - 2021-02-10
+
+### Changed
 - 3 IPs removed and 3 IPs added for instances hosted on Amazon EKS `us-east-1` region.
 
 ## [1.3.7][1.3.7] - 2020-12-24
