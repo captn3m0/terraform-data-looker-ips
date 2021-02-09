@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [1.3.8][1.3.8] - 2021-02-10
+- 3 IPs removed and 3 IPs added for instances hosted on Amazon EKS `us-east-1` region.
+
 ## [1.3.7][1.3.7] - 2020-12-24
 
 ### Added
@@ -104,7 +107,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Initial Release
 
-[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.5...HEAD
+[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.8...HEAD
+[1.3.8]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.7...v1.3.8
+[1.3.7]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.6...v1.3.7
+[1.3.6]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.5...v1.3.6
 [1.3.5]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.4...v1.3.5
 [1.3.4]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.3...v1.3.4
 [1.3.3]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.2...v1.3.3
