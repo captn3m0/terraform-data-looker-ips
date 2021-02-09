@@ -147,9 +147,9 @@ locals {
   ]
 
   /**
-      Use these IP addresses for all instances hosted on Amazon EKS
-      that were created on or after 07/07/2020.
-    */
+   * Use these IP addresses for all instances hosted on Amazon EKS
+   * that were created on or after 07/07/2020.
+   */
 
   eks-us-east-1 = [
     "18.210.137.130",
@@ -158,10 +158,11 @@ locals {
     "18.235.225.163",
     "54.92.246.223",
     "75.101.147.97",
-    "3.212.72.104",
-    "52.21.115.135",
-    "18.210.252.49",
+    "52.55.239.166",
+    "52.86.109.68",
+    "54.159.176.199",
   ]
+
   eks-ca-central-1 = [
     "52.60.157.61",
     "35.182.169.25",
