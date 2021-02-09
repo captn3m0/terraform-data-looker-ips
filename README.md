@@ -1,4 +1,4 @@
-# terraform-data-looker-ips
+# terraform-data-looker-ips ![GitHub last commit](https://img.shields.io/github/last-commit/captn3m0/terraform-data-looker-ips) ![GitHub Release Date](https://img.shields.io/github/release-date/captn3m0/terraform-data-looker-ips) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/captn3m0/terraform-data-looker-ips) ![GitHub](https://img.shields.io/github/license/captn3m0/terraform-data-looker-ips)
 
 Looker's IP addresses, as per [their documentation](https://docs.looker.com/setup-and-management/enabling-secure-db).
 
