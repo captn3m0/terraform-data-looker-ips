@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [1.4.0][1.4.0] - 2021-04-24
+- 1 IP added for instances hosted on Microsoft Azure `us-east2` region.
+
 ## [1.3.8][1.3.8] - 2021-02-10
 
 ### Changed

@@ -1,4 +1,4 @@
-# terraform-data-looker-ips ![GitHub last commit](https://img.shields.io/github/last-commit/captn3m0/terraform-data-looker-ips) ![GitHub Release Date](https://img.shields.io/github/release-date/captn3m0/terraform-data-looker-ips) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/captn3m0/terraform-data-looker-ips) ![GitHub](https://img.shields.io/github/license/captn3m0/terraform-data-looker-ips)
+# terraform-data-looker-ips ![License:MIT](https://img.shields.io/badge/license-MIT-blue.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/captn3m0/terraform-data-looker-ips) ![GitHub Release Date](https://img.shields.io/github/release-date/captn3m0/terraform-data-looker-ips) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/captn3m0/terraform-data-looker-ips)
 
 Looker's IP addresses, as per [their documentation](https://docs.looker.com/setup-and-management/enabling-secure-db).
 
@@ -7,6 +7,7 @@ This module supports all 3 modes of hosting:
 - Legacy AWS
 - Next generation GCP
 - Next generation EKS
+- Microsoft Azure
 
 Please make sure to read the Looker documentation before you start using this module.
 
@@ -15,7 +16,7 @@ Please make sure to read the Looker documentation before you start using this mo
 ```hcl
 module "looker-ips" {
   source  = "captn3m0/looker-ips/data"
-  version = "v1.3.8"
+  version = "v1.4.0"
 }
 
 resource "aws_security_group_rule" "allow_all_from_looker_aws_us" {
@@ -31,9 +32,10 @@ resource "aws_security_group_rule" "allow_all_from_looker_aws_us" {
 ## Outputs
 
 - All output variables are lists.
-- For instances hosted in  "Legacy AWS hosting" is based on 2 letter [ISO country codes][3166] and [common continent codes](https://datahub.io/core/continent-codes#readme).
-- For instances hosted in GCP, [the corresponding region codes are used](https://cloud.google.com/compute/docs/regions-zones).
-- For instances hosted in EKS, the AWS region code is prefixed with `eks-`.
+- For instances hosted on  "Legacy AWS hosting" is based on 2 letter [ISO country codes][3166] and [common continent codes](https://datahub.io/core/continent-codes#readme).
+- For instances hosted on GCP, [the corresponding region codes are used](https://cloud.google.com/compute/docs/regions-zones).
+- For instances hosted on EKS, the AWS region code is prefixed with `eks-`.
+- For instances hosted on Microsoft Azure, the Azure region code is prefixed with `azure-`.
 - Every output variable is available in 2 formats - list of IP addresses, or list of CIDRs. The CIDRs are generated using a `/32` suffix on all IPs.
 
 To pick the correct output variable, check the below and search for the corresponding term the variable description.
@@ -41,6 +43,7 @@ To pick the correct output variable, check the below and search for the correspo
 1. If your instance is hosted on AWS that was created before 07/07/2020 - Search for "AWS"
 2. If your instance is hosted on EKS and was created after 07/0/72020 - Search for "EKS"
 3. If your instance is hosted on GCP - Search for GCP
+4. If your instance is hosted on Microsoft Azure - Search for Azure.
 
 If you are unsure which region your instance is in, please reach out to Looker support.
 
