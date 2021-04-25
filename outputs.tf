@@ -322,22 +322,27 @@ output "eks_ca_central_1" {
   description = "IP addresses for instances hosted on Amazon EKS in ca-central-1 region."
   value       = "${local.eks-ca-central-1}"
 }
+
 output "eks_eu_west_1" {
   description = "IP addresses for instances hosted on Amazon EKS in eu-west-1 region."
   value       = "${local.eks-eu-west-1}"
 }
+
 output "eks_eu_central_1" {
   description = "IP addresses for instances hosted on Amazon EKS in eu-central-1 region."
   value       = "${local.eks-eu-central-1}"
 }
+
 output "eks_ap_northeast_1" {
   description = "IP addresses for instances hosted on Amazon EKS in ap-northeast-1 region."
   value       = "${local.eks-ap-northeast-1}"
 }
+
 output "eks_ap_southeast_2" {
   description = "IP addresses for instances hosted on Amazon EKS in ap-southeast-2 region."
   value       = "${local.eks-ap-southeast-2}"
 }
+
 output "eks_sa_east_1" {
   description = "IP addresses for instances hosted on Amazon EKS in sa-east-1 region."
   value       = "${local.eks-sa-east-1}"
@@ -347,22 +352,27 @@ output "eks_ca_central_1_cidr" {
   description = "CIDRs for instances hosted on Amazon EKS in eks-ca-central-1 region"
   value       = ["${formatlist("%s/32", local.eks-ca-central-1)}"]
 }
+
 output "eks_eu_west_1_cidr" {
   description = "CIDRs for instances hosted on Amazon EKS in eks-eu-west-1 region"
   value       = ["${formatlist("%s/32", local.eks-eu-west-1)}"]
 }
+
 output "eks_eu_central_1_cidr" {
   description = "CIDRs for instances hosted on Amazon EKS in eks-eu-central-1 region"
   value       = ["${formatlist("%s/32", local.eks-eu-central-1)}"]
 }
+
 output "eks_ap_northeast_1_cidr" {
   description = "CIDRs for instances hosted on Amazon EKS in eks-ap-northeast-1 region"
   value       = ["${formatlist("%s/32", local.eks-ap-northeast-1)}"]
 }
+
 output "eks_ap_southeast_2_cidr" {
   description = "CIDRs for instances hosted on Amazon EKS in eks-ap-southeast-2 region"
   value       = ["${formatlist("%s/32", local.eks-ap-southeast-2)}"]
 }
+
 output "eks_sa_east_1_cidr" {
   description = "CIDRs for instances hosted on Amazon EKS in eks-sa-east-1 region"
   value       = ["${formatlist("%s/32", local.eks-sa-east-1)}"]
@@ -396,12 +406,45 @@ output "eks_cidr" {
   ))}"
 }
 
+##### Microsoft Azure IPs ####
+
+// Virginia, USA
+output "azure_us_east2_ips" {
+  description = "IP addresses for instances hosted on Microsoft Azure (Virginia, USA / azure-us-east2)"
+  value       = "${local.azure-us-east2}"
+}
 
 
-##### Combined AWS+GCP+EKS #####
+##### Microsoft Azure  CIDRs #####
+
+// Virginia, USA
+output "azure_us_east2_cidr" {
+  description = "CIDRs for instances hosted on Microsoft Azure (Virginia, USA / azure-us-east2)"
+  value       = ["${formatlist("%s/32", local.azure-us-east2)}"]
+}
+
+##### Microsoft Azure Combined ####
+
+output "azure_ips" {
+  description = "IP addresses for instances hosted on Microsoft Azure across all regions"
+
+  value = "${concat(
+    local.azure-us-east2,
+  )}"
+}
+
+output "azure_cidr" {
+  description = "CIDRs for instances hosted on Microsoft Azure across all regions"
+
+  value = "${formatlist("%s/32", concat(
+    local.azure-us-east2,
+  ))}"
+}
+
+##### Combined AWS+GCP+EKS+Azure #####
 
 output "all_cidr" {
-  description = "Looker IP addresses everywhere in CIDR (Legacy + GCP + EKS)"
+  description = "Looker IP addresses everywhere in CIDR (Legacy + GCP + EKS + Azure)"
 
   value = "${formatlist("%s/32", concat(
     local.gcp-us-east1,
@@ -430,11 +473,12 @@ output "all_cidr" {
     local.eks-ap-northeast-1,
     local.eks-ap-southeast-2,
     local.eks-sa-east-1,
+    local.azure-us-east2,
   ))}"
 }
 
 output "all_ips" {
-  description = "Looker IP addresses everywhere (Legacy AWS + GCP + EKS)"
+  description = "Looker IP addresses everywhere (Legacy AWS + GCP + EKS + Azure)"
 
   value = "${concat(
     local.gcp-us-east1,
@@ -463,5 +507,6 @@ output "all_ips" {
     local.eks-ap-northeast-1,
     local.eks-ap-southeast-2,
     local.eks-sa-east-1,
+    local.azure-us-east2,
   )}"
 }
