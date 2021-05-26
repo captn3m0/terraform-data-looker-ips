@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.0.0][2.0.0] - 2021-05-26
+- Added: GCP/`asia-south-1` (Mumbai, India)
+- Removed: `EKS-us-east-1` ("For the list of IP addresses to add to your allowlist for this region, contact Looker Support")
+- Removed: `EKS-eu-west-1` ("For the list of IP addresses to add to your allowlist for this region, contact Looker Support")
+
 ## [1.4.0][1.4.0] - 2021-04-24
 - 1 IP added for instances hosted on Microsoft Azure `us-east2` region.
 

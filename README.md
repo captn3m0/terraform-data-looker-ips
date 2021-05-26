@@ -41,7 +41,7 @@ resource "aws_security_group_rule" "allow_all_from_looker_aws_us" {
 To pick the correct output variable, check the below and search for the corresponding term the variable description.
 
 1. If your instance is hosted on AWS that was created before 07/07/2020 - Search for "AWS"
-2. If your instance is hosted on EKS and was created after 07/0/72020 - Search for "EKS"
+2. If your instance is hosted on EKS and was created after 07/0/72020 - Search for "EKS". If your instance is in EKS/`eu-west-1` or EKS/`us-east-1`, you will need to contact Looker support to get your IP range.
 3. If your instance is hosted on GCP - Search for GCP
 4. If your instance is hosted on Microsoft Azure - Search for Azure.
 
@@ -49,8 +49,14 @@ If you are unsure which region your instance is in, please reach out to Looker s
 
 | Name | Description |
 |------|-------------|
-| all\_cidr | Looker IP addresses everywhere in CIDR (Legacy + GCP + EKS) |
-| all\_ips | Looker IP addresses everywhere (Legacy AWS + GCP + EKS) |
+| all\_cidr | Looker IP addresses everywhere in CIDR (Legacy + GCP + EKS + Azure) |
+| all\_ips | Looker IP addresses everywhere (Legacy AWS + GCP + EKS + Azure) |
+| aws\_cidr | Legacy Hosting CIDR for all for instances hosted on AWS that were created before 07/07/2020 |
+| aws\_ips | Legacy Hosting IP addresses for instances hosted anywhere that were created before 07/07/2020 |
+| azure\_cidr | CIDRs for instances hosted on Microsoft Azure across all regions |
+| azure\_ips | IP addresses for instances hosted on Microsoft Azure across all regions |
+| azure\_us\_east2\_cidr | CIDRs for instances hosted on Microsoft Azure (Virginia, USA / azure-us-east2) |
+| azure\_us\_east2\_ips | IP addresses for instances hosted on Microsoft Azure (Virginia, USA / azure-us-east2) |
 | eks\_ap\_northeast\_1 | IP addresses for instances hosted on Amazon EKS in ap-northeast-1 region. |
 | eks\_ap\_northeast\_1\_cidr | CIDRs for instances hosted on Amazon EKS in eks-ap-northeast-1 region |
 | eks\_ap\_southeast\_2 | IP addresses for instances hosted on Amazon EKS in ap-southeast-2 region. |
@@ -60,15 +66,19 @@ If you are unsure which region your instance is in, please reach out to Looker s
 | eks\_cidr | CIDRs for instances hosted on Amazon EKS across all regions |
 | eks\_eu\_central\_1 | IP addresses for instances hosted on Amazon EKS in eu-central-1 region. |
 | eks\_eu\_central\_1\_cidr | CIDRs for instances hosted on Amazon EKS in eks-eu-central-1 region |
-| eks\_eu\_west\_1 | IP addresses for instances hosted on Amazon EKS in eu-west-1 region. |
-| eks\_eu\_west\_1\_cidr | CIDRs for instances hosted on Amazon EKS in eks-eu-west-1 region |
 | eks\_ips | IP addresses for instances hosted on Amazon EKS across all regions |
 | eks\_sa\_east\_1 | IP addresses for instances hosted on Amazon EKS in sa-east-1 region. |
 | eks\_sa\_east\_1\_cidr | CIDRs for instances hosted on Amazon EKS in eks-sa-east-1 region |
+| gcp\_asia\_east1\_cidr | CIDRs for instances hosted on GCP (Taiwan / asia-east1) |
+| gcp\_asia\_east1\_ips | IP addresses for instances hosted on GCP (Taiwan / asia-east1) |
 | gcp\_asia\_northeast1\_cidr | CIDRs for instances hosted on GCP (Tokyo / asia-northeast1) |
 | gcp\_asia\_northeast1\_ips | IP addresses for instances hosted on GCP (Tokyo / gcp-asia-northeast1) |
-| gcp\_asia\_southeast1\_cidr | CIDRs for instances hosted on GCP (South Carolina / us-east1) |
+| gcp\_asia\_south1\_cidr | CIDRs for instances hosted on GCP (Mumbai / asia-south1) |
+| gcp\_asia\_south\_1\_ips | IP addresses for instances hosted on GCP (Mumbai / asia-south1) |
+| gcp\_asia\_southeast1\_cidr | CIDRs for instances hosted on GCP (Singapore / asia-southeast1) |
 | gcp\_asia\_southeast1\_ips | IP addresses for instances hosted on GCP (Singapore / asia-southeast1) |
+| gcp\_asia\_southeast2\_cidr | CIDRs for instances hosted on GCP (Jakarta / asia-southeast2) |
+| gcp\_asia\_southeast2\_ips | IP addresses for instances hosted on GCP (Jakarta / asia-southeast2) |
 | gcp\_australia\_southeast1\_cidr | CIDRs for instances hosted on GCP (Sydney / australia-southeast1) |
 | gcp\_australia\_southeast1\_ips | IP addresses for instances hosted on GCP (Sydney / australia-southeast1) |
 | gcp\_cidr | IP addresses for instances hosted on GCP in any region. |
@@ -76,6 +86,8 @@ If you are unsure which region your instance is in, please reach out to Looker s
 | gcp\_europe\_west2\_ips | IP addresses for instances hosted on GCP (London / europe-west2) |
 | gcp\_europe\_west3\_cidr | CIDRs for instances hosted on GCP (Frankfurt / europe-west3) |
 | gcp\_europe\_west3\_ips | IP addresses for instances hosted on GCP (Frankfurt / europe-west3) |
+| gcp\_europe\_west4\_cidr | CIDRs for instances hosted on GCP (Eemshaven / europe-west4) |
+| gcp\_europe\_west4\_ips | IP addresses for instances hosted on GCP (Eemshaven / europe-west4) |
 | gcp\_ips | Looker IP addresses everywhere (GCP only). |
 | gcp\_northamerica\_northeast1\_cidr | CIDRs for instances hosted on GCP (Canada / Montreal / gcp-northamerica-northeast1) |
 | gcp\_northamerica\_northeast1\_ips | IP addresses for instances hosted on GCP (Canada / Montreal / gcp-northamerica-northeast1) |
@@ -93,8 +105,6 @@ If you are unsure which region your instance is in, please reach out to Looker s
 | as\_cidr | Legacy Hosting CIDR in Asia for instances hosted on AWS that were created before 07/07/2020 |
 | au | Legacy Hosting IP Addresses in Australia for instances hosted on AWS that were created before 07/07/2020 |
 | au\_cidr | Legacy Hosting CIDR in Australia for instances hosted on AWS that were created before 07/07/2020 |
-| aws\_cidr | Legacy Hosting CIDR for all for instances hosted on AWS that were created before 07/07/2020 |
-| aws\_ips | Legacy Hosting IP addresses for instances hosted anywhere that were created before 07/07/2020 |
 | ca | Legacy Hosting IP Addresses in Canada for instances hosted on AWS that were created before 07/07/2020 |
 | ca\_cidr | Legacy Hosting CIDR in Canada for instances hosted on AWS that were created before 07/07/2020 |
 | de | Legacy Hosting IP Addresses in Germany for instances hosted on AWS that were created before 07/07/2020 |
