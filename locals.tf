@@ -74,6 +74,11 @@ locals {
     "35.204.222.110",
   ]
 
+  # Mumbai, India
+  gcp-asia-south1 = [
+    "35.200.135.236",
+  ]
+
   # Changhua County, Taiwan
   gcp-asia-east1 = [
     "104.199.206.209",

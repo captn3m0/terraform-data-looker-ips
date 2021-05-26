@@ -112,7 +112,7 @@ output "gcp_us_east4_ips" {
   value       = "${local.gcp-us-east4}"
 }
 
-// Northern Virginia
+// Council Bluffs, Iowa, USA
 output "gcp_us_central1_ips" {
   description = "IP addresses for instances hosted on GCP (Iowa / gcp-us-central1)"
   value       = "${local.gcp-us-central1}"
@@ -146,6 +146,12 @@ output "gcp_europe_west3_ips" {
 output "gcp_europe_west4_ips" {
   description = "IP addresses for instances hosted on GCP (Eemshaven / europe-west4)"
   value       = "${local.gcp-europe-west4}"
+}
+
+// Mumbai, India
+output "gcp_asia_south_1_ips" {
+  description = "IP addresses for instances hosted on GCP (Mumbai / asia-south1)"
+  value       = "${local.gcp-asia-south1}"
 }
 
 // Taiwan
@@ -237,6 +243,12 @@ output "gcp_europe_west4_cidr" {
   value       = ["${formatlist("%s/32", local.gcp-europe-west4)}"]
 }
 
+// Mumbai, India
+output "gcp_asia_south1_cidr" {
+  description = "CIDRs for instances hosted on GCP (Mumbai / asia-south1)"
+  value       = ["${formatlist("%s/32", local.gcp-asia-south1)}"]
+}
+
 // Taiwan
 output "gcp_asia_east1_cidr" {
   description = "CIDRs for instances hosted on GCP (Taiwan / asia-east1)"
@@ -323,11 +335,6 @@ output "eks_ca_central_1" {
   value       = "${local.eks-ca-central-1}"
 }
 
-output "eks_eu_west_1" {
-  description = "IP addresses for instances hosted on Amazon EKS in eu-west-1 region."
-  value       = "${local.eks-eu-west-1}"
-}
-
 output "eks_eu_central_1" {
   description = "IP addresses for instances hosted on Amazon EKS in eu-central-1 region."
   value       = "${local.eks-eu-central-1}"
@@ -351,11 +358,6 @@ output "eks_sa_east_1" {
 output "eks_ca_central_1_cidr" {
   description = "CIDRs for instances hosted on Amazon EKS in eks-ca-central-1 region"
   value       = ["${formatlist("%s/32", local.eks-ca-central-1)}"]
-}
-
-output "eks_eu_west_1_cidr" {
-  description = "CIDRs for instances hosted on Amazon EKS in eks-eu-west-1 region"
-  value       = ["${formatlist("%s/32", local.eks-eu-west-1)}"]
 }
 
 output "eks_eu_central_1_cidr" {
@@ -382,9 +384,7 @@ output "eks_ips" {
   description = "IP addresses for instances hosted on Amazon EKS across all regions"
 
   value = "${concat(
-    local.eks-us-east-1,
     local.eks-ca-central-1,
-    local.eks-eu-west-1,
     local.eks-eu-central-1,
     local.eks-ap-northeast-1,
     local.eks-ap-southeast-2,
@@ -396,9 +396,7 @@ output "eks_cidr" {
   description = "CIDRs for instances hosted on Amazon EKS across all regions"
 
   value = "${formatlist("%s/32", concat(
-    local.eks-us-east-1,
     local.eks-ca-central-1,
-    local.eks-eu-west-1,
     local.eks-eu-central-1,
     local.eks-ap-northeast-1,
     local.eks-ap-southeast-2,
@@ -455,6 +453,7 @@ output "all_cidr" {
     local.gcp-europe-west2,
     local.gcp-europe-west3,
     local.gcp-europe-west4,
+    local.gcp-asia-south1,
     local.gcp-asia-northeast1,
     local.gcp-asia-southeast1,
     local.gcp-australia-southeast1,
@@ -466,9 +465,7 @@ output "all_cidr" {
     local.de,
     local.au,
     local.sa,
-    local.eks-us-east-1,
     local.eks-ca-central-1,
-    local.eks-eu-west-1,
     local.eks-eu-central-1,
     local.eks-ap-northeast-1,
     local.eks-ap-southeast-2,
@@ -489,6 +486,7 @@ output "all_ips" {
     local.gcp-europe-west2,
     local.gcp-europe-west3,
     local.gcp-europe-west4,
+    local.gcp-asia-south1,
     local.gcp-asia-northeast1,
     local.gcp-asia-southeast1,
     local.gcp-australia-southeast1,
@@ -500,9 +498,7 @@ output "all_ips" {
     local.de,
     local.au,
     local.sa,
-    local.eks-us-east-1,
     local.eks-ca-central-1,
-    local.eks-eu-west-1,
     local.eks-eu-central-1,
     local.eks-ap-northeast-1,
     local.eks-ap-southeast-2,
