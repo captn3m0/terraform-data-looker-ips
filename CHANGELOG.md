@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.0.2] - 2021-06-18
+### Added
+- New Region for EKS: `us-west-2`
+
 ## [2.0.1] - 2021-06-11
 ### Added
 - New IP for `gcp-us-east4`
@@ -124,7 +128,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Initial Release
 
-[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.1...HEAD
+[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.2...HEAD
+[2.0.2]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.4.0...v2.0.0
 [1.4.0]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v1.3.8...v1.4.0

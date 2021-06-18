@@ -330,6 +330,11 @@ output "gcp_ips" {
 
 ##### EKS Section Begins ####
 
+output "eks_us_west_2" {
+  description = "IP addresses for instances hosted on Amazon EKS in us-west-2 region."
+  value       = "${local.eks-us-west-2}"
+}
+
 output "eks_ca_central_1" {
   description = "IP addresses for instances hosted on Amazon EKS in ca-central-1 region."
   value       = "${local.eks-ca-central-1}"
@@ -355,28 +360,33 @@ output "eks_sa_east_1" {
   value       = "${local.eks-sa-east-1}"
 }
 
+output "eks_us_west_2_cidr" {
+  description = "CIDRs for instances hosted on Amazon EKS in us-west-2 region"
+  value       = ["${formatlist("%s/32", local.eks-us-west-2)}"]
+}
+
 output "eks_ca_central_1_cidr" {
-  description = "CIDRs for instances hosted on Amazon EKS in eks-ca-central-1 region"
+  description = "CIDRs for instances hosted on Amazon EKS in ca-central-1 region"
   value       = ["${formatlist("%s/32", local.eks-ca-central-1)}"]
 }
 
 output "eks_eu_central_1_cidr" {
-  description = "CIDRs for instances hosted on Amazon EKS in eks-eu-central-1 region"
+  description = "CIDRs for instances hosted on Amazon EKS in eu-central-1 region"
   value       = ["${formatlist("%s/32", local.eks-eu-central-1)}"]
 }
 
 output "eks_ap_northeast_1_cidr" {
-  description = "CIDRs for instances hosted on Amazon EKS in eks-ap-northeast-1 region"
+  description = "CIDRs for instances hosted on Amazon EKS in ap-northeast-1 region"
   value       = ["${formatlist("%s/32", local.eks-ap-northeast-1)}"]
 }
 
 output "eks_ap_southeast_2_cidr" {
-  description = "CIDRs for instances hosted on Amazon EKS in eks-ap-southeast-2 region"
+  description = "CIDRs for instances hosted on Amazon EKS in ap-southeast-2 region"
   value       = ["${formatlist("%s/32", local.eks-ap-southeast-2)}"]
 }
 
 output "eks_sa_east_1_cidr" {
-  description = "CIDRs for instances hosted on Amazon EKS in eks-sa-east-1 region"
+  description = "CIDRs for instances hosted on Amazon EKS in sa-east-1 region"
   value       = ["${formatlist("%s/32", local.eks-sa-east-1)}"]
 }
 
@@ -384,6 +394,7 @@ output "eks_ips" {
   description = "IP addresses for instances hosted on Amazon EKS across all regions"
 
   value = "${concat(
+    local.eks-us-west-2,
     local.eks-ca-central-1,
     local.eks-eu-central-1,
     local.eks-ap-northeast-1,
@@ -396,6 +407,7 @@ output "eks_cidr" {
   description = "CIDRs for instances hosted on Amazon EKS across all regions"
 
   value = "${formatlist("%s/32", concat(
+    local.eks-us-west-2,
     local.eks-ca-central-1,
     local.eks-eu-central-1,
     local.eks-ap-northeast-1,
