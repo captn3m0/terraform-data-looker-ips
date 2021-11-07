@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.0.4] - 2021-11-07
+### Removed
+- 1 IP removed for `gcp-us-east1`
+### Added
+- 1 IP added for `gcp-us-west1`
+- 1 IP added for `gcp-asia-northeast1`
+- 6 IPs added for `eks-ca-central-1`
+- 6 IPs added for eks-eu-central-1
+
 ## [2.0.3] - 2021-07-13
 ### Removed
 - 1 IP removed for `gcp-us-west1`
