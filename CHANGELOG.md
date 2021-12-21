@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.0.6] - 2021-12-21
+### Added
+- 6 new IPs added to `eks-eu-central-1`
+- 6 new IPs added to `eks-ca-central-1`
+- New region: `eks-us-east-2` with 3 IPs
+- 1 new IP for `gcp-europe-west3`
+### Removed
+- 1 IP removed from `gcp-us-east1` (`35.196.227.117`)
+- 1 IP removed from `gcp-europe-west2` (`34.142.123.96`)
+
 ## [2.0.5] - 2021-11-23
 ### Removed
 - All IPs that were added in [2.0.3]. These changes were reverted by Looker and were confirmed as a mistake.
@@ -150,7 +160,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Initial Release
 
-[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.3...HEAD
+[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.6...HEAD
+[2.0.6]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.5...v2.0.6
 [2.0.5]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.2...v2.0.3

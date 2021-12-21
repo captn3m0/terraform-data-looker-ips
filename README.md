@@ -16,7 +16,7 @@ Please make sure to read the Looker documentation before you start using this mo
 ```hcl
 module "looker-ips" {
   source  = "captn3m0/looker-ips/data"
-  version = "v2.0.5"
+  version = "v2.0.6"
 }
 
 resource "aws_security_group_rule" "allow_all_from_looker_aws_us" {
@@ -49,23 +49,7 @@ If you are unsure which region your instance is in, please reach out to Looker s
 
 ## Requirements
 
-No requirements.
-
-## Providers
-
-No providers.
-
-## Modules
-
-No modules.
-
-## Resources
-
-No resources.
-
-## Inputs
-
-No inputs.
+Supports Terraform 0.11 and above.
 
 ## Outputs
 
@@ -99,6 +83,8 @@ No inputs.
 | eks\_ips | IP addresses for instances hosted on Amazon EKS across all regions |
 | eks\_sa\_east\_1 | IP addresses for instances hosted on Amazon EKS in sa-east-1 region. |
 | eks\_sa\_east\_1\_cidr | CIDRs for instances hosted on Amazon EKS in sa-east-1 region |
+| eks\_us\_east\_2 | IP addresses for instances hosted on Amazon EKS in us-east-2 region. |
+| eks\_us\_east\_2\_cidr | CIDRs for instances hosted on Amazon EKS in us-east-2 region |
 | eks\_us\_west\_2 | IP addresses for instances hosted on Amazon EKS in us-west-2 region. |
 | eks\_us\_west\_2\_cidr | CIDRs for instances hosted on Amazon EKS in us-west-2 region |
 | gcp\_asia\_east1\_cidr | CIDRs for instances hosted on GCP (Taiwan / asia-east1) |
