@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.0.7] - 2021-12-27
+### Added
+- 3 new IPs added to `gcp-us-west1`
+
 ## [2.0.6] - 2021-12-21
 ### Added
 - 6 new IPs added to `eks-eu-central-1`
@@ -160,7 +164,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Initial Release
 
-[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.6...HEAD
+[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.7...HEAD
+[2.0.7]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.6...v2.0.7
 [2.0.6]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.5...v2.0.6
 [2.0.5]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.3...v2.0.4
