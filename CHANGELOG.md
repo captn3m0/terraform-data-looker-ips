@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.0.8] - 2022-01-11
+### Added
+- 3 new IPs added to `gcp-us-east4` (Ashburn, Northern Virginia)
+- 3 new IPs added to `gcp-us-central1` (Council Bluffs, Iowa)
+- 4 new IPs added to `gcp-us-west1` (The Dalles, Oregon)
+- 5 new IPs added to `gcp-europe-west2` (London, England, UK)
+- 3 new IPs added to `gcp-europe-west3` (Frankfurt, Germany)
+- 1 new IP added to `gcp-asia-northeast1` (Tokyo, Japan)
+
 ## [2.0.7] - 2021-12-27
 ### Added
 - 3 new IPs added to `gcp-us-west1`
