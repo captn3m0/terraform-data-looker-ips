@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 5 new IPs added to `gcp-europe-west2` (London, England, UK)
 - 3 new IPs added to `gcp-europe-west3` (Frankfurt, Germany)
 - 1 new IP added to `gcp-asia-northeast1` (Tokyo, Japan)
+- 1 new IP added to `eks-eu-central-1` (Frankfurt)
 
 ## [2.0.7] - 2021-12-27
 ### Added
@@ -173,7 +174,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Initial Release
 
-[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.7...HEAD
+[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.8...HEAD
+[2.0.8]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.7...v2.0.8
 [2.0.7]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.6...v2.0.7
 [2.0.6]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.5...v2.0.6
 [2.0.5]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.4...v2.0.5
