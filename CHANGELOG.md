@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.0.9] - 2022-01-12
+### Removed
+- Removed a duplicate IP address from `gcp-europe-west2` (London)
+
 ## [2.0.8] - 2022-01-11
 ### Added
 - 3 new IPs added to `gcp-us-east4` (Ashburn, Northern Virginia)
@@ -174,7 +178,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Initial Release
 
-[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.8...HEAD
+[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.9...HEAD
+[2.0.9]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.9...v2.0.9
 [2.0.8]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.7...v2.0.8
 [2.0.7]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.6...v2.0.7
 [2.0.6]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.5...v2.0.6

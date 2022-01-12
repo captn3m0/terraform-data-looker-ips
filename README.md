@@ -16,7 +16,7 @@ Please make sure to read the Looker documentation before you start using this mo
 ```hcl
 module "looker-ips" {
   source  = "captn3m0/looker-ips/data"
-  version = "v2.0.8"
+  version = "v2.0.9"
 }
 
 resource "aws_security_group_rule" "allow_all_from_looker_aws_us" {
