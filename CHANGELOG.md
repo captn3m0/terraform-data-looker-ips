@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [3.0.0] - 2022-02-02
+### Removed
+- IPs/CIDRs for instances hosted on Amazon EKS in us-east-2 region (Ohio) have been removed.
+
 ## [2.0.9] - 2022-01-12
 ### Removed
 - Removed a duplicate IP address from `gcp-europe-west2` (London)
@@ -178,8 +182,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Initial Release
 
-[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.9...HEAD
-[2.0.9]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.9...v2.0.9
+[unreleased]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.9...v3.0.0
+[2.0.9]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.8...v2.0.9
 [2.0.8]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.7...v2.0.8
 [2.0.7]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.6...v2.0.7
 [2.0.6]: https://github.com/captn3m0/terraform-data-looker-ips/compare/v2.0.5...v2.0.6

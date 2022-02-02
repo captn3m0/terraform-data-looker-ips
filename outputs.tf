@@ -335,11 +335,6 @@ output "eks_us_west_2" {
   value       = "${local.eks-us-west-2}"
 }
 
-output "eks_us_east_2" {
-  description = "IP addresses for instances hosted on Amazon EKS in us-east-2 region."
-  value       = "${local.eks-us-east-2}"
-}
-
 output "eks_ca_central_1" {
   description = "IP addresses for instances hosted on Amazon EKS in ca-central-1 region."
   value       = "${local.eks-ca-central-1}"
@@ -368,11 +363,6 @@ output "eks_sa_east_1" {
 output "eks_us_west_2_cidr" {
   description = "CIDRs for instances hosted on Amazon EKS in us-west-2 region"
   value       = ["${formatlist("%s/32", local.eks-us-west-2)}"]
-}
-
-output "eks_us_east_2_cidr" {
-  description = "CIDRs for instances hosted on Amazon EKS in us-east-2 region"
-  value       = ["${formatlist("%s/32", local.eks-us-east-2)}"]
 }
 
 output "eks_ca_central_1_cidr" {
@@ -405,7 +395,6 @@ output "eks_ips" {
 
   value = "${concat(
     local.eks-us-west-2,
-    local.eks-us-east-2,
     local.eks-ca-central-1,
     local.eks-eu-central-1,
     local.eks-ap-northeast-1,
@@ -419,7 +408,6 @@ output "eks_cidr" {
 
   value = "${formatlist("%s/32", concat(
     local.eks-us-west-2,
-    local.eks-us-east-2,
     local.eks-ca-central-1,
     local.eks-eu-central-1,
     local.eks-ap-northeast-1,
@@ -490,7 +478,6 @@ output "all_cidr" {
     local.au,
     local.sa,
     local.eks-us-west-2,
-    local.eks-us-east-2,
     local.eks-ca-central-1,
     local.eks-eu-central-1,
     local.eks-ap-northeast-1,
@@ -524,7 +511,6 @@ output "all_ips" {
     local.de,
     local.au,
     local.sa,
-    local.eks-us-east-2,
     local.eks-us-west-2,
     local.eks-ca-central-1,
     local.eks-eu-central-1,
