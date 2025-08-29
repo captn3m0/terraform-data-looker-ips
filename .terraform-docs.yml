@@ -1,0 +1,14 @@
+output:
+  file: README.md
+  mode: inject
+formatter: markdown table
+sections:
+  show:
+    - outputs
+settings:
+  anchor: false
+  default: false
+  html: false
+  type: false
+sort:
+  enabled: false

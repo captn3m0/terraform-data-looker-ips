@@ -16,7 +16,7 @@ Please make sure to read the Looker documentation before you start using this mo
 ```hcl
 module "looker-ips" {
   source  = "captn3m0/looker-ips/data"
-  version = "v2.0.9"
+  version = "v3.0.0"
 }
 
 resource "aws_security_group_rule" "allow_all_from_looker_aws_us" {
@@ -51,80 +51,99 @@ If you are unsure which region your instance is in, please reach out to Looker s
 
 Supports Terraform 0.11 and above.
 
+<!-- BEGIN_TF_DOCS -->
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| all\_cidr | Looker IP addresses everywhere in CIDR (Legacy + GCP + EKS + Azure) |
-| all\_ips | Looker IP addresses everywhere (Legacy AWS + GCP + EKS + Azure) |
-| as | Legacy Hosting IP Addresses in Asia for instances hosted on AWS that were created before 07/07/2020 |
-| as\_cidr | Legacy Hosting CIDR in Asia for instances hosted on AWS that were created before 07/07/2020 |
-| au | Legacy Hosting IP Addresses in Australia for instances hosted on AWS that were created before 07/07/2020 |
-| au\_cidr | Legacy Hosting CIDR in Australia for instances hosted on AWS that were created before 07/07/2020 |
-| aws\_cidr | Legacy Hosting CIDR for all for instances hosted on AWS that were created before 07/07/2020 |
-| aws\_ips | Legacy Hosting IP addresses for instances hosted anywhere that were created before 07/07/2020 |
-| azure\_cidr | CIDRs for instances hosted on Microsoft Azure across all regions |
-| azure\_ips | IP addresses for instances hosted on Microsoft Azure across all regions |
-| azure\_us\_east2\_cidr | CIDRs for instances hosted on Microsoft Azure (Virginia, USA / azure-us-east2) |
-| azure\_us\_east2\_ips | IP addresses for instances hosted on Microsoft Azure (Virginia, USA / azure-us-east2) |
-| ca | Legacy Hosting IP Addresses in Canada for instances hosted on AWS that were created before 07/07/2020 |
-| ca\_cidr | Legacy Hosting CIDR in Canada for instances hosted on AWS that were created before 07/07/2020 |
-| de | Legacy Hosting IP Addresses in Germany for instances hosted on AWS that were created before 07/07/2020 |
-| de\_cidr | Legacy Hosting CIDR in Germany for instances hosted on AWS that were created before 07/07/2020 |
-| eks\_ap\_northeast\_1 | IP addresses for instances hosted on Amazon EKS in ap-northeast-1 region. |
-| eks\_ap\_northeast\_1\_cidr | CIDRs for instances hosted on Amazon EKS in ap-northeast-1 region |
-| eks\_ap\_southeast\_2 | IP addresses for instances hosted on Amazon EKS in ap-southeast-2 region. |
-| eks\_ap\_southeast\_2\_cidr | CIDRs for instances hosted on Amazon EKS in ap-southeast-2 region |
-| eks\_ca\_central\_1 | IP addresses for instances hosted on Amazon EKS in ca-central-1 region. |
-| eks\_ca\_central\_1\_cidr | CIDRs for instances hosted on Amazon EKS in ca-central-1 region |
-| eks\_cidr | CIDRs for instances hosted on Amazon EKS across all regions |
-| eks\_eu\_central\_1 | IP addresses for instances hosted on Amazon EKS in eu-central-1 region. |
-| eks\_eu\_central\_1\_cidr | CIDRs for instances hosted on Amazon EKS in eu-central-1 region |
-| eks\_ips | IP addresses for instances hosted on Amazon EKS across all regions |
-| eks\_sa\_east\_1 | IP addresses for instances hosted on Amazon EKS in sa-east-1 region. |
-| eks\_sa\_east\_1\_cidr | CIDRs for instances hosted on Amazon EKS in sa-east-1 region |
-| eks\_us\_east\_2 | IP addresses for instances hosted on Amazon EKS in us-east-2 region. |
-| eks\_us\_east\_2\_cidr | CIDRs for instances hosted on Amazon EKS in us-east-2 region |
-| eks\_us\_west\_2 | IP addresses for instances hosted on Amazon EKS in us-west-2 region. |
-| eks\_us\_west\_2\_cidr | CIDRs for instances hosted on Amazon EKS in us-west-2 region |
-| gcp\_asia\_east1\_cidr | CIDRs for instances hosted on GCP (Taiwan / asia-east1) |
-| gcp\_asia\_east1\_ips | IP addresses for instances hosted on GCP (Taiwan / asia-east1) |
-| gcp\_asia\_northeast1\_cidr | CIDRs for instances hosted on GCP (Tokyo / asia-northeast1) |
-| gcp\_asia\_northeast1\_ips | IP addresses for instances hosted on GCP (Tokyo / gcp-asia-northeast1) |
-| gcp\_asia\_south1\_cidr | CIDRs for instances hosted on GCP (Mumbai / asia-south1) |
 | gcp\_asia\_south\_1\_ips | IP addresses for instances hosted on GCP (Mumbai / asia-south1) |
-| gcp\_asia\_southeast1\_cidr | CIDRs for instances hosted on GCP (Singapore / asia-southeast1) |
-| gcp\_asia\_southeast1\_ips | IP addresses for instances hosted on GCP (Singapore / asia-southeast1) |
-| gcp\_asia\_southeast2\_cidr | CIDRs for instances hosted on GCP (Jakarta / asia-southeast2) |
-| gcp\_asia\_southeast2\_ips | IP addresses for instances hosted on GCP (Jakarta / asia-southeast2) |
-| gcp\_australia\_southeast1\_cidr | CIDRs for instances hosted on GCP (Sydney / australia-southeast1) |
-| gcp\_australia\_southeast1\_ips | IP addresses for instances hosted on GCP (Sydney / australia-southeast1) |
-| gcp\_cidr | IP addresses for instances hosted on GCP in any region. |
-| gcp\_europe\_west2\_cidr | CIDRs for instances hosted on GCP (London / europe-west2) |
-| gcp\_europe\_west2\_ips | IP addresses for instances hosted on GCP (London / europe-west2) |
-| gcp\_europe\_west3\_cidr | CIDRs for instances hosted on GCP (Frankfurt / europe-west3) |
-| gcp\_europe\_west3\_ips | IP addresses for instances hosted on GCP (Frankfurt / europe-west3) |
-| gcp\_europe\_west4\_cidr | CIDRs for instances hosted on GCP (Eemshaven / europe-west4) |
-| gcp\_europe\_west4\_ips | IP addresses for instances hosted on GCP (Eemshaven / europe-west4) |
-| gcp\_ips | Looker IP addresses everywhere (GCP only). |
-| gcp\_northamerica\_northeast1\_cidr | CIDRs for instances hosted on GCP (Canada / Montreal / gcp-northamerica-northeast1) |
-| gcp\_northamerica\_northeast1\_ips | IP addresses for instances hosted on GCP (Canada / Montreal / gcp-northamerica-northeast1) |
-| gcp\_southamerica\_east1\_cidr | CIDRs for instances hosted on GCP (São Paulo / southamerica-east1) |
-| gcp\_southamerica\_east1\_ips | IP addresses for instances hosted on GCP (São Paulo / gcp-southamerica-east1) |
-| gcp\_us\_central1\_cidr | CIDRs for instances hosted on GCP (Iowa / us-central1) |
-| gcp\_us\_central1\_ips | IP addresses for instances hosted on GCP (Iowa / gcp-us-central1) |
-| gcp\_us\_east1\_cidr | CIDRs for instances hosted on GCP (South Carolina / us-east1) |
-| gcp\_us\_east1\_ips | IP addresses for instances hosted on GCP (South Carolina / us-east1) |
-| gcp\_us\_east4\_cidr | CIDRs for instances hosted on GCP (Iowa / us-east4) |
-| gcp\_us\_east4\_ips | IP addresses for instances hosted on GCP (Northern Virginia / us-east4) |
-| gcp\_us\_west1\_cidr | CIDRs for instances hosted on GCP (Oregon / us-west1) |
-| gcp\_us\_west1\_ips | IP addresses for instances hosted on GCP (Oregon / us-west1) |
-| ie | Legacy Hosting IP Addresses in Ireland for instances hosted on AWS that were created before 07/07/2020 |
-| ie\_cidr | Legacy Hosting CIDR in Ireland for instances hosted on AWS that were created before 07/07/2020 |
-| sa | Legacy Hosting IP Addresses in South America for instances hosted on AWS that were created before 07/07/2020 |
-| sa\_cidr | Legacy Hosting CIDR in South America for instances hosted on AWS that were created before 07/07/2020 |
+| eks\_us\_west\_2 | IP addresses for instances hosted on Amazon EKS in us-west-2 region. |
+| eks\_ca\_central\_1 | IP addresses for instances hosted on Amazon EKS in ca-central-1 region. |
+| eks\_eu\_central\_1 | IP addresses for instances hosted on Amazon EKS in eu-central-1 region. |
+| eks\_ap\_northeast\_1 | IP addresses for instances hosted on Amazon EKS in ap-northeast-1 region. |
+| eks\_ap\_southeast\_2 | IP addresses for instances hosted on Amazon EKS in ap-southeast-2 region. |
+| eks\_us\_west\_2\_cidr | CIDRs for instances hosted on Amazon EKS in us-west-2 region |
+| eks\_ca\_central\_1\_cidr | CIDRs for instances hosted on Amazon EKS in ca-central-1 region |
+| eks\_eu\_central\_1\_cidr | CIDRs for instances hosted on Amazon EKS in eu-central-1 region |
+| eks\_ap\_northeast\_1\_cidr | CIDRs for instances hosted on Amazon EKS in ap-northeast-1 region |
+| eks\_ap\_southeast\_2\_cidr | CIDRs for instances hosted on Amazon EKS in ap-southeast-2 region |
 | us | Legacy Hosting IP Addresses in United States for instances hosted on AWS that were created before 07/07/2020 |
 | us\_cidr | Legacy Hosting CIDR in United States for instances hosted on AWS that were created before 07/07/2020 |
+| ca | Legacy Hosting IP Addresses in Canada for instances hosted on AWS that were created before 07/07/2020 |
+| ca\_cidr | Legacy Hosting CIDR in Canada for instances hosted on AWS that were created before 07/07/2020 |
+| as | Legacy Hosting IP Addresses in Asia for instances hosted on AWS that were created before 07/07/2020 |
+| as\_cidr | Legacy Hosting CIDR in Asia for instances hosted on AWS that were created before 07/07/2020 |
+| ie | Legacy Hosting IP Addresses in Ireland for instances hosted on AWS that were created before 07/07/2020 |
+| ie\_cidr | Legacy Hosting CIDR in Ireland for instances hosted on AWS that were created before 07/07/2020 |
+| de | Legacy Hosting IP Addresses in Germany for instances hosted on AWS that were created before 07/07/2020 |
+| de\_cidr | Legacy Hosting CIDR in Germany for instances hosted on AWS that were created before 07/07/2020 |
+| au | Legacy Hosting IP Addresses in Australia for instances hosted on AWS that were created before 07/07/2020 |
+| au\_cidr | Legacy Hosting CIDR in Australia for instances hosted on AWS that were created before 07/07/2020 |
+| sa | Legacy Hosting IP Addresses in South America for instances hosted on AWS that were created before 07/07/2020 |
+| sa\_cidr | Legacy Hosting CIDR in South America for instances hosted on AWS that were created before 07/07/2020 |
+| aws\_ips | Legacy Hosting IP addresses for instances hosted anywhere that were created before 07/07/2020 |
+| aws\_cidr | Legacy Hosting CIDR for all for instances hosted on AWS that were created before 07/07/2020 |
+| gcp\_us\_east1\_ips | IP addresses for instances hosted on GCP (South Carolina / us-east1) |
+| gcp\_us\_east1\_cidr | CIDRs for instances hosted on GCP (South Carolina / us-east1) |
+| gcp\_us\_east4\_ips | IP addresses for instances hosted on GCP (Northern Virginia / us-east4) |
+| gcp\_us\_east4\_cidr | CIDRs for instances hosted on GCP (Northern Virginia / us-east4) |
+| gcp\_us\_central1\_ips | IP addresses for instances hosted on GCP (Iowa / us-central1) |
+| gcp\_us\_central1\_cidr | CIDRs for instances hosted on GCP (Iowa / us-central1) |
+| gcp\_us\_west1\_ips | IP addresses for instances hosted on GCP (Oregon / us-west1) |
+| gcp\_us\_west1\_cidr | CIDRs for instances hosted on GCP (Oregon / us-west1) |
+| gcp\_us\_west2\_ips | IP addresses for instances hosted on GCP (California / us-west2) |
+| gcp\_us\_west2\_cidr | CIDRs for instances hosted on GCP (California / us-west2) |
+| gcp\_northamerica\_northeast1\_ips | IP addresses for instances hosted on GCP (Québec / northamerica-northeast1) |
+| gcp\_northamerica\_northeast1\_cidr | CIDRs for instances hosted on GCP (Québec / northamerica-northeast1) |
+| gcp\_europe\_west2\_ips | IP addresses for instances hosted on GCP (England / europe-west2) |
+| gcp\_europe\_west2\_cidr | CIDRs for instances hosted on GCP (England / europe-west2) |
+| gcp\_europe\_west3\_ips | IP addresses for instances hosted on GCP (Frankfurt / europe-west3) |
+| gcp\_europe\_west3\_cidr | CIDRs for instances hosted on GCP (Frankfurt / europe-west3) |
+| gcp\_asia\_south1\_ips | IP addresses for instances hosted on GCP (Mumbai / asia-south1) |
+| gcp\_asia\_south1\_cidr | CIDRs for instances hosted on GCP (Mumbai / asia-south1) |
+| gcp\_europe\_west4\_ips | IP addresses for instances hosted on GCP (Eemshaven / europe-west4) |
+| gcp\_europe\_west4\_cidr | CIDRs for instances hosted on GCP (Eemshaven / europe-west4) |
+| gcp\_asia\_east1\_ips | IP addresses for instances hosted on GCP (Changhua County / asia-east1) |
+| gcp\_asia\_east1\_cidr | CIDRs for instances hosted on GCP (Changhua County / asia-east1) |
+| gcp\_asia\_northeast1\_ips | IP addresses for instances hosted on GCP (Tokyo / asia-northeast1) |
+| gcp\_asia\_northeast1\_cidr | CIDRs for instances hosted on GCP (Tokyo / asia-northeast1) |
+| gcp\_asia\_southeast1\_ips | IP addresses for instances hosted on GCP (Jurong West / asia-southeast1) |
+| gcp\_asia\_southeast1\_cidr | CIDRs for instances hosted on GCP (Jurong West / asia-southeast1) |
+| gcp\_asia\_southeast2\_ips | IP addresses for instances hosted on GCP (Jakarta / asia-southeast2) |
+| gcp\_asia\_southeast2\_cidr | CIDRs for instances hosted on GCP (Jakarta / asia-southeast2) |
+| gcp\_australia\_southeast1\_ips | IP addresses for instances hosted on GCP (Sydney / australia-southeast1) |
+| gcp\_australia\_southeast1\_cidr | CIDRs for instances hosted on GCP (Sydney / australia-southeast1) |
+| gcp\_southamerica\_east1\_ips | IP addresses for instances hosted on GCP (Osasco / São Paulo), Brazil) |
+| gcp\_southamerica\_east1\_cidr | CIDRs for instances hosted on GCP (Osasco / São Paulo), Brazil) |
+| gcp\_ips | IP addresses for instances hosted on GCP across all regions |
+| gcp\_cidr | CIDRs for instances hosted on GCP across all regions |
+| eks\_us\_east\_1 | IP addresses for instances hosted on Amazon EKS in US East / N. Virginia) region. |
+| eks\_us\_east\_1\_cidr | CIDRs for instances hosted on Amazon EKS in US East / N. Virginia) region |
+| eks\_ohio | IP addresses for instances hosted on Amazon EKS in US East / Ohio) region. |
+| eks\_ohio\_cidr | CIDRs for instances hosted on Amazon EKS in US East / Ohio) region |
+| eks\_oregon | IP addresses for instances hosted on Amazon EKS in US West / Oregon) region. |
+| eks\_oregon\_cidr | CIDRs for instances hosted on Amazon EKS in US West / Oregon) region |
+| eks\_central | IP addresses for instances hosted on Amazon EKS in Canada / Central) region. |
+| eks\_central\_cidr | CIDRs for instances hosted on Amazon EKS in Canada / Central) region |
+| eks\_ireland | IP addresses for instances hosted on Amazon EKS in Europe / Ireland) region. |
+| eks\_ireland\_cidr | CIDRs for instances hosted on Amazon EKS in Europe / Ireland) region |
+| eks\_frankfurt | IP addresses for instances hosted on Amazon EKS in Europe / Frankfurt) region. |
+| eks\_frankfurt\_cidr | CIDRs for instances hosted on Amazon EKS in Europe / Frankfurt) region |
+| eks\_tokyo | IP addresses for instances hosted on Amazon EKS in Asia Pacific / Tokyo) region. |
+| eks\_tokyo\_cidr | CIDRs for instances hosted on Amazon EKS in Asia Pacific / Tokyo) region |
+| eks\_sydney | IP addresses for instances hosted on Amazon EKS in Asia Pacific / Sydney) region. |
+| eks\_sydney\_cidr | CIDRs for instances hosted on Amazon EKS in Asia Pacific / Sydney) region |
+| eks\_sa\_east\_1 | IP addresses for instances hosted on Amazon EKS in South America / São Paulo) region. |
+| eks\_sa\_east\_1\_cidr | CIDRs for instances hosted on Amazon EKS in South America / São Paulo) region |
+| eks\_ips | IP addresses for instances hosted on Amazon EKS across all regions |
+| eks\_cidr | CIDRs for instances hosted on Amazon EKS across all regions |
+| azure\_us\_east2\_ips | IP addresses for instances hosted on Microsoft Azure (Virginia, USA / us-east2) |
+| azure\_us\_east2\_cidr | CIDRs for instances hosted on Microsoft Azure (Virginia, USA / us-east2) |
+| azure\_ips | IP addresses for instances hosted on Microsoft Azure across all regions |
+| azure\_cidr | CIDRs for instances hosted on Microsoft Azure across all regions |
+| all\_ips | Looker IP addresses everywhere (Legacy AWS + GCP + EKS + Azure) |
+| all\_cidr | Looker IP addresses everywhere in CIDR (Legacy + GCP + EKS + Azure) |
+<!-- END_TF_DOCS -->
 
 # Changelog
 
@@ -135,3 +154,5 @@ See [CHANGELOG.md](CHANGELOG.md)
 Licensed under MIT. See [nemo.mit-license.org](https://nemo.mit-license.org) for complete text.
 
 [3166]: https://www.iso.org/obp/ui/#search
+
+

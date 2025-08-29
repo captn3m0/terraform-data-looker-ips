@@ -1,0 +1,374 @@
+{
+  "output": {
+    "us": {
+      "description": "Legacy Hosting IP Addresses in United States for instances hosted on AWS that were created before 07/07/2020",
+      "value": "${local.us}"
+    },
+    "us_cidr": {
+      "description": "Legacy Hosting CIDR in United States for instances hosted on AWS that were created before 07/07/2020",
+      "value": [
+        "${formatlist(\"%s/32\", local.us)}"
+      ]
+    },
+    "ca": {
+      "description": "Legacy Hosting IP Addresses in Canada for instances hosted on AWS that were created before 07/07/2020",
+      "value": "${local.ca}"
+    },
+    "ca_cidr": {
+      "description": "Legacy Hosting CIDR in Canada for instances hosted on AWS that were created before 07/07/2020",
+      "value": [
+        "${formatlist(\"%s/32\", local.ca)}"
+      ]
+    },
+    "as": {
+      "description": "Legacy Hosting IP Addresses in Asia for instances hosted on AWS that were created before 07/07/2020",
+      "value": "${local.as}"
+    },
+    "as_cidr": {
+      "description": "Legacy Hosting CIDR in Asia for instances hosted on AWS that were created before 07/07/2020",
+      "value": [
+        "${formatlist(\"%s/32\", local.as)}"
+      ]
+    },
+    "ie": {
+      "description": "Legacy Hosting IP Addresses in Ireland for instances hosted on AWS that were created before 07/07/2020",
+      "value": "${local.ie}"
+    },
+    "ie_cidr": {
+      "description": "Legacy Hosting CIDR in Ireland for instances hosted on AWS that were created before 07/07/2020",
+      "value": [
+        "${formatlist(\"%s/32\", local.ie)}"
+      ]
+    },
+    "de": {
+      "description": "Legacy Hosting IP Addresses in Germany for instances hosted on AWS that were created before 07/07/2020",
+      "value": "${local.de}"
+    },
+    "de_cidr": {
+      "description": "Legacy Hosting CIDR in Germany for instances hosted on AWS that were created before 07/07/2020",
+      "value": [
+        "${formatlist(\"%s/32\", local.de)}"
+      ]
+    },
+    "au": {
+      "description": "Legacy Hosting IP Addresses in Australia for instances hosted on AWS that were created before 07/07/2020",
+      "value": "${local.au}"
+    },
+    "au_cidr": {
+      "description": "Legacy Hosting CIDR in Australia for instances hosted on AWS that were created before 07/07/2020",
+      "value": [
+        "${formatlist(\"%s/32\", local.au)}"
+      ]
+    },
+    "sa": {
+      "description": "Legacy Hosting IP Addresses in South America for instances hosted on AWS that were created before 07/07/2020",
+      "value": "${local.sa}"
+    },
+    "sa_cidr": {
+      "description": "Legacy Hosting CIDR in South America for instances hosted on AWS that were created before 07/07/2020",
+      "value": [
+        "${formatlist(\"%s/32\", local.sa)}"
+      ]
+    },
+    "aws_ips": {
+      "description": "Legacy Hosting IP addresses for instances hosted anywhere that were created before 07/07/2020",
+      "value": "${concat(local.us, local.ca, local.as, local.ie, local.de, local.au, local.sa)}"
+    },
+    "aws_cidr": {
+      "description": "Legacy Hosting CIDR for all for instances hosted on AWS that were created before 07/07/2020",
+      "value": "${formatlist(\"%s/32\", concat(local.us, local.ca, local.as, local.ie, local.de, local.au, local.sa))}"
+    },
+    "gcp_us_east1_ips": {
+      "description": "IP addresses for instances hosted on GCP (South Carolina / us-east1)",
+      "value": "${local.gcp-us-east1}"
+    },
+    "gcp_us_east1_cidr": {
+      "description": "CIDRs for instances hosted on GCP (South Carolina / us-east1)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-us-east1)}"
+      ]
+    },
+    "gcp_us_east4_ips": {
+      "description": "IP addresses for instances hosted on GCP (Northern Virginia / us-east4)",
+      "value": "${local.gcp-us-east4}"
+    },
+    "gcp_us_east4_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Northern Virginia / us-east4)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-us-east4)}"
+      ]
+    },
+    "gcp_us_central1_ips": {
+      "description": "IP addresses for instances hosted on GCP (Iowa / us-central1)",
+      "value": "${local.gcp-us-central1}"
+    },
+    "gcp_us_central1_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Iowa / us-central1)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-us-central1)}"
+      ]
+    },
+    "gcp_us_west1_ips": {
+      "description": "IP addresses for instances hosted on GCP (Oregon / us-west1)",
+      "value": "${local.gcp-us-west1}"
+    },
+    "gcp_us_west1_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Oregon / us-west1)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-us-west1)}"
+      ]
+    },
+    "gcp_us_west2_ips": {
+      "description": "IP addresses for instances hosted on GCP (California / us-west2)",
+      "value": "${local.gcp-us-west2}"
+    },
+    "gcp_us_west2_cidr": {
+      "description": "CIDRs for instances hosted on GCP (California / us-west2)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-us-west2)}"
+      ]
+    },
+    "gcp_northamerica_northeast1_ips": {
+      "description": "IP addresses for instances hosted on GCP (Qu\u00e9bec / northamerica-northeast1)",
+      "value": "${local.gcp-northamerica-northeast1}"
+    },
+    "gcp_northamerica_northeast1_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Qu\u00e9bec / northamerica-northeast1)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-northamerica-northeast1)}"
+      ]
+    },
+    "gcp_europe_west2_ips": {
+      "description": "IP addresses for instances hosted on GCP (England / europe-west2)",
+      "value": "${local.gcp-europe-west2}"
+    },
+    "gcp_europe_west2_cidr": {
+      "description": "CIDRs for instances hosted on GCP (England / europe-west2)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-europe-west2)}"
+      ]
+    },
+    "gcp_europe_west3_ips": {
+      "description": "IP addresses for instances hosted on GCP (Frankfurt / europe-west3)",
+      "value": "${local.gcp-europe-west3}"
+    },
+    "gcp_europe_west3_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Frankfurt / europe-west3)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-europe-west3)}"
+      ]
+    },
+    "gcp_asia_south1_ips": {
+      "description": "IP addresses for instances hosted on GCP (Mumbai / asia-south1)",
+      "value": "${local.gcp-asia-south1}"
+    },
+    "gcp_asia_south1_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Mumbai / asia-south1)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-asia-south1)}"
+      ]
+    },
+    "gcp_europe_west4_ips": {
+      "description": "IP addresses for instances hosted on GCP (Eemshaven / europe-west4)",
+      "value": "${local.gcp-europe-west4}"
+    },
+    "gcp_europe_west4_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Eemshaven / europe-west4)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-europe-west4)}"
+      ]
+    },
+    "gcp_asia_east1_ips": {
+      "description": "IP addresses for instances hosted on GCP (Changhua County / asia-east1)",
+      "value": "${local.gcp-asia-east1}"
+    },
+    "gcp_asia_east1_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Changhua County / asia-east1)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-asia-east1)}"
+      ]
+    },
+    "gcp_asia_northeast1_ips": {
+      "description": "IP addresses for instances hosted on GCP (Tokyo / asia-northeast1)",
+      "value": "${local.gcp-asia-northeast1}"
+    },
+    "gcp_asia_northeast1_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Tokyo / asia-northeast1)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-asia-northeast1)}"
+      ]
+    },
+    "gcp_asia_southeast1_ips": {
+      "description": "IP addresses for instances hosted on GCP (Jurong West / asia-southeast1)",
+      "value": "${local.gcp-asia-southeast1}"
+    },
+    "gcp_asia_southeast1_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Jurong West / asia-southeast1)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-asia-southeast1)}"
+      ]
+    },
+    "gcp_asia_southeast2_ips": {
+      "description": "IP addresses for instances hosted on GCP (Jakarta / asia-southeast2)",
+      "value": "${local.gcp-asia-southeast2}"
+    },
+    "gcp_asia_southeast2_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Jakarta / asia-southeast2)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-asia-southeast2)}"
+      ]
+    },
+    "gcp_australia_southeast1_ips": {
+      "description": "IP addresses for instances hosted on GCP (Sydney / australia-southeast1)",
+      "value": "${local.gcp-australia-southeast1}"
+    },
+    "gcp_australia_southeast1_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Sydney / australia-southeast1)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-australia-southeast1)}"
+      ]
+    },
+    "gcp_southamerica_east1_ips": {
+      "description": "IP addresses for instances hosted on GCP (Osasco / S\u00e3o Paulo), Brazil)",
+      "value": "${local.gcp-southamerica-east1}"
+    },
+    "gcp_southamerica_east1_cidr": {
+      "description": "CIDRs for instances hosted on GCP (Osasco / S\u00e3o Paulo), Brazil)",
+      "value": [
+        "${formatlist(\"%s/32\", local.gcp-southamerica-east1)}"
+      ]
+    },
+    "gcp_ips": {
+      "description": "IP addresses for instances hosted on GCP across all regions",
+      "value": "${concat(local.gcp-us-east1, local.gcp-us-east4, local.gcp-us-central1, local.gcp-us-west1, local.gcp-us-west2, local.gcp-northamerica-northeast1, local.gcp-europe-west2, local.gcp-europe-west3, local.gcp-asia-south1, local.gcp-europe-west4, local.gcp-asia-east1, local.gcp-asia-northeast1, local.gcp-asia-southeast1, local.gcp-asia-southeast2, local.gcp-australia-southeast1, local.gcp-southamerica-east1)}"
+    },
+    "gcp_cidr": {
+      "description": "CIDRs for instances hosted on GCP across all regions",
+      "value": "${formatlist(\"%s/32\", concat(local.gcp-us-east1, local.gcp-us-east4, local.gcp-us-central1, local.gcp-us-west1, local.gcp-us-west2, local.gcp-northamerica-northeast1, local.gcp-europe-west2, local.gcp-europe-west3, local.gcp-asia-south1, local.gcp-europe-west4, local.gcp-asia-east1, local.gcp-asia-northeast1, local.gcp-asia-southeast1, local.gcp-asia-southeast2, local.gcp-australia-southeast1, local.gcp-southamerica-east1))}"
+    },
+    "eks_us_east_1": {
+      "description": "IP addresses for instances hosted on Amazon EKS (US East / N. Virginia))",
+      "value": "${local.eks-us-east-1}"
+    },
+    "eks_us_east_1_cidr": {
+      "description": "CIDRs for instances hosted on Amazon EKS (US East / N. Virginia))",
+      "value": [
+        "${formatlist(\"%s/32\", local.eks-us-east-1)}"
+      ]
+    },
+    "eks_ohio": {
+      "description": "IP addresses for instances hosted on Amazon EKS (US East / Ohio))",
+      "value": "${local.eks-ohio}"
+    },
+    "eks_ohio_cidr": {
+      "description": "CIDRs for instances hosted on Amazon EKS (US East / Ohio))",
+      "value": [
+        "${formatlist(\"%s/32\", local.eks-ohio)}"
+      ]
+    },
+    "eks_oregon": {
+      "description": "IP addresses for instances hosted on Amazon EKS (US West / Oregon))",
+      "value": "${local.eks-oregon}"
+    },
+    "eks_oregon_cidr": {
+      "description": "CIDRs for instances hosted on Amazon EKS (US West / Oregon))",
+      "value": [
+        "${formatlist(\"%s/32\", local.eks-oregon)}"
+      ]
+    },
+    "eks_central": {
+      "description": "IP addresses for instances hosted on Amazon EKS (Canada / Central))",
+      "value": "${local.eks-central}"
+    },
+    "eks_central_cidr": {
+      "description": "CIDRs for instances hosted on Amazon EKS (Canada / Central))",
+      "value": [
+        "${formatlist(\"%s/32\", local.eks-central)}"
+      ]
+    },
+    "eks_ireland": {
+      "description": "IP addresses for instances hosted on Amazon EKS (Europe / Ireland))",
+      "value": "${local.eks-ireland}"
+    },
+    "eks_ireland_cidr": {
+      "description": "CIDRs for instances hosted on Amazon EKS (Europe / Ireland))",
+      "value": [
+        "${formatlist(\"%s/32\", local.eks-ireland)}"
+      ]
+    },
+    "eks_frankfurt": {
+      "description": "IP addresses for instances hosted on Amazon EKS (Europe / Frankfurt))",
+      "value": "${local.eks-frankfurt}"
+    },
+    "eks_frankfurt_cidr": {
+      "description": "CIDRs for instances hosted on Amazon EKS (Europe / Frankfurt))",
+      "value": [
+        "${formatlist(\"%s/32\", local.eks-frankfurt)}"
+      ]
+    },
+    "eks_tokyo": {
+      "description": "IP addresses for instances hosted on Amazon EKS (Asia Pacific / Tokyo))",
+      "value": "${local.eks-tokyo}"
+    },
+    "eks_tokyo_cidr": {
+      "description": "CIDRs for instances hosted on Amazon EKS (Asia Pacific / Tokyo))",
+      "value": [
+        "${formatlist(\"%s/32\", local.eks-tokyo)}"
+      ]
+    },
+    "eks_sydney": {
+      "description": "IP addresses for instances hosted on Amazon EKS (Asia Pacific / Sydney))",
+      "value": "${local.eks-sydney}"
+    },
+    "eks_sydney_cidr": {
+      "description": "CIDRs for instances hosted on Amazon EKS (Asia Pacific / Sydney))",
+      "value": [
+        "${formatlist(\"%s/32\", local.eks-sydney)}"
+      ]
+    },
+    "eks_sa_east_1": {
+      "description": "IP addresses for instances hosted on Amazon EKS (South America / S\u00e3o Paulo))",
+      "value": "${local.eks-sa-east-1}"
+    },
+    "eks_sa_east_1_cidr": {
+      "description": "CIDRs for instances hosted on Amazon EKS (South America / S\u00e3o Paulo))",
+      "value": [
+        "${formatlist(\"%s/32\", local.eks-sa-east-1)}"
+      ]
+    },
+    "eks_ips": {
+      "description": "IP addresses for instances hosted on Amazon EKS across all regions",
+      "value": "${concat(local.eks-us-east-1, local.eks-ohio, local.eks-oregon, local.eks-central, local.eks-ireland, local.eks-frankfurt, local.eks-tokyo, local.eks-sydney, local.eks-sa-east-1)}"
+    },
+    "eks_cidr": {
+      "description": "CIDRs for instances hosted on Amazon EKS across all regions",
+      "value": "${formatlist(\"%s/32\", concat(local.eks-us-east-1, local.eks-ohio, local.eks-oregon, local.eks-central, local.eks-ireland, local.eks-frankfurt, local.eks-tokyo, local.eks-sydney, local.eks-sa-east-1))}"
+    },
+    "azure_us_east2_ips": {
+      "description": "IP addresses for instances hosted on Microsoft Azure (Virginia, USA / us-east2)",
+      "value": "${local.azure-us-east2}"
+    },
+    "azure_us_east2_cidr": {
+      "description": "CIDRs for instances hosted on Microsoft Azure (Virginia, USA / us-east2)",
+      "value": [
+        "${formatlist(\"%s/32\", local.azure-us-east2)}"
+      ]
+    },
+    "azure_ips": {
+      "description": "IP addresses for instances hosted on Microsoft Azure across all regions",
+      "value": "${concat(local.azure-us-east2)}"
+    },
+    "azure_cidr": {
+      "description": "CIDRs for instances hosted on Microsoft Azure across all regions",
+      "value": "${formatlist(\"%s/32\", concat(local.azure-us-east2))}"
+    },
+    "all_ips": {
+      "description": "Looker IP addresses everywhere (Legacy AWS + GCP + EKS + Azure)",
+      "value": "${concat(local.gcp-us-east1, local.gcp-us-east4, local.gcp-us-central1, local.gcp-us-west1, local.gcp-us-west2, local.gcp-northamerica-northeast1, local.gcp-europe-west2, local.gcp-europe-west3, local.gcp-asia-south1, local.gcp-europe-west4, local.gcp-asia-east1, local.gcp-asia-northeast1, local.gcp-asia-southeast1, local.gcp-asia-southeast2, local.gcp-australia-southeast1, local.gcp-southamerica-east1, local.eks-us-east-1, local.eks-ohio, local.eks-oregon, local.eks-central, local.eks-ireland, local.eks-frankfurt, local.eks-tokyo, local.eks-sydney, local.eks-sa-east-1, local.azure-us-east2, local.us, local.ca, local.as, local.ie, local.de, local.au, local.sa)}"
+    },
+    "all_cidr": {
+      "description": "Looker IP addresses everywhere in CIDR (Legacy + GCP + EKS + Azure)",
+      "value": "${formatlist(\"%s/32\", concat(local.gcp-us-east1, local.gcp-us-east4, local.gcp-us-central1, local.gcp-us-west1, local.gcp-us-west2, local.gcp-northamerica-northeast1, local.gcp-europe-west2, local.gcp-europe-west3, local.gcp-asia-south1, local.gcp-europe-west4, local.gcp-asia-east1, local.gcp-asia-northeast1, local.gcp-asia-southeast1, local.gcp-asia-southeast2, local.gcp-australia-southeast1, local.gcp-southamerica-east1, local.eks-us-east-1, local.eks-ohio, local.eks-oregon, local.eks-central, local.eks-ireland, local.eks-frankfurt, local.eks-tokyo, local.eks-sydney, local.eks-sa-east-1, local.azure-us-east2, local.us, local.ca, local.as, local.ie, local.de, local.au, local.sa))}"
+    }
+  }
+}
