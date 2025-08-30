@@ -3,4 +3,4 @@ locals.tf.json:
 clean:
 	rm locals.tf.json outputs.tf.json
 docs:
-	
+	terraform-docs .

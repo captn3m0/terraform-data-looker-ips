@@ -56,17 +56,6 @@ Supports Terraform 0.11 and above.
 
 | Name | Description |
 |------|-------------|
-| gcp\_asia\_south\_1\_ips | IP addresses for instances hosted on GCP (Mumbai / asia-south1) |
-| eks\_us\_west\_2 | IP addresses for instances hosted on Amazon EKS in us-west-2 region. |
-| eks\_ca\_central\_1 | IP addresses for instances hosted on Amazon EKS in ca-central-1 region. |
-| eks\_eu\_central\_1 | IP addresses for instances hosted on Amazon EKS in eu-central-1 region. |
-| eks\_ap\_northeast\_1 | IP addresses for instances hosted on Amazon EKS in ap-northeast-1 region. |
-| eks\_ap\_southeast\_2 | IP addresses for instances hosted on Amazon EKS in ap-southeast-2 region. |
-| eks\_us\_west\_2\_cidr | CIDRs for instances hosted on Amazon EKS in us-west-2 region |
-| eks\_ca\_central\_1\_cidr | CIDRs for instances hosted on Amazon EKS in ca-central-1 region |
-| eks\_eu\_central\_1\_cidr | CIDRs for instances hosted on Amazon EKS in eu-central-1 region |
-| eks\_ap\_northeast\_1\_cidr | CIDRs for instances hosted on Amazon EKS in ap-northeast-1 region |
-| eks\_ap\_southeast\_2\_cidr | CIDRs for instances hosted on Amazon EKS in ap-southeast-2 region |
 | us | Legacy Hosting IP Addresses in United States for instances hosted on AWS that were created before 07/07/2020 |
 | us\_cidr | Legacy Hosting CIDR in United States for instances hosted on AWS that were created before 07/07/2020 |
 | ca | Legacy Hosting IP Addresses in Canada for instances hosted on AWS that were created before 07/07/2020 |
@@ -117,24 +106,24 @@ Supports Terraform 0.11 and above.
 | gcp\_southamerica\_east1\_cidr | CIDRs for instances hosted on GCP (Osasco / São Paulo), Brazil) |
 | gcp\_ips | IP addresses for instances hosted on GCP across all regions |
 | gcp\_cidr | CIDRs for instances hosted on GCP across all regions |
-| eks\_us\_east\_1 | IP addresses for instances hosted on Amazon EKS in US East / N. Virginia) region. |
-| eks\_us\_east\_1\_cidr | CIDRs for instances hosted on Amazon EKS in US East / N. Virginia) region |
-| eks\_ohio | IP addresses for instances hosted on Amazon EKS in US East / Ohio) region. |
-| eks\_ohio\_cidr | CIDRs for instances hosted on Amazon EKS in US East / Ohio) region |
-| eks\_oregon | IP addresses for instances hosted on Amazon EKS in US West / Oregon) region. |
-| eks\_oregon\_cidr | CIDRs for instances hosted on Amazon EKS in US West / Oregon) region |
-| eks\_central | IP addresses for instances hosted on Amazon EKS in Canada / Central) region. |
-| eks\_central\_cidr | CIDRs for instances hosted on Amazon EKS in Canada / Central) region |
-| eks\_ireland | IP addresses for instances hosted on Amazon EKS in Europe / Ireland) region. |
-| eks\_ireland\_cidr | CIDRs for instances hosted on Amazon EKS in Europe / Ireland) region |
-| eks\_frankfurt | IP addresses for instances hosted on Amazon EKS in Europe / Frankfurt) region. |
-| eks\_frankfurt\_cidr | CIDRs for instances hosted on Amazon EKS in Europe / Frankfurt) region |
-| eks\_tokyo | IP addresses for instances hosted on Amazon EKS in Asia Pacific / Tokyo) region. |
-| eks\_tokyo\_cidr | CIDRs for instances hosted on Amazon EKS in Asia Pacific / Tokyo) region |
-| eks\_sydney | IP addresses for instances hosted on Amazon EKS in Asia Pacific / Sydney) region. |
-| eks\_sydney\_cidr | CIDRs for instances hosted on Amazon EKS in Asia Pacific / Sydney) region |
-| eks\_sa\_east\_1 | IP addresses for instances hosted on Amazon EKS in South America / São Paulo) region. |
-| eks\_sa\_east\_1\_cidr | CIDRs for instances hosted on Amazon EKS in South America / São Paulo) region |
+| eks\_us\_east\_1 | IP addresses for instances hosted on Amazon EKS (US East / N. Virginia)) |
+| eks\_us\_east\_1\_cidr | CIDRs for instances hosted on Amazon EKS (US East / N. Virginia)) |
+| eks\_ohio | IP addresses for instances hosted on Amazon EKS (US East / Ohio)) |
+| eks\_ohio\_cidr | CIDRs for instances hosted on Amazon EKS (US East / Ohio)) |
+| eks\_oregon | IP addresses for instances hosted on Amazon EKS (US West / Oregon)) |
+| eks\_oregon\_cidr | CIDRs for instances hosted on Amazon EKS (US West / Oregon)) |
+| eks\_central | IP addresses for instances hosted on Amazon EKS (Canada / Central)) |
+| eks\_central\_cidr | CIDRs for instances hosted on Amazon EKS (Canada / Central)) |
+| eks\_ireland | IP addresses for instances hosted on Amazon EKS (Europe / Ireland)) |
+| eks\_ireland\_cidr | CIDRs for instances hosted on Amazon EKS (Europe / Ireland)) |
+| eks\_frankfurt | IP addresses for instances hosted on Amazon EKS (Europe / Frankfurt)) |
+| eks\_frankfurt\_cidr | CIDRs for instances hosted on Amazon EKS (Europe / Frankfurt)) |
+| eks\_tokyo | IP addresses for instances hosted on Amazon EKS (Asia Pacific / Tokyo)) |
+| eks\_tokyo\_cidr | CIDRs for instances hosted on Amazon EKS (Asia Pacific / Tokyo)) |
+| eks\_sydney | IP addresses for instances hosted on Amazon EKS (Asia Pacific / Sydney)) |
+| eks\_sydney\_cidr | CIDRs for instances hosted on Amazon EKS (Asia Pacific / Sydney)) |
+| eks\_sa\_east\_1 | IP addresses for instances hosted on Amazon EKS (South America / São Paulo)) |
+| eks\_sa\_east\_1\_cidr | CIDRs for instances hosted on Amazon EKS (South America / São Paulo)) |
 | eks\_ips | IP addresses for instances hosted on Amazon EKS across all regions |
 | eks\_cidr | CIDRs for instances hosted on Amazon EKS across all regions |
 | azure\_us\_east2\_ips | IP addresses for instances hosted on Microsoft Azure (Virginia, USA / us-east2) |
